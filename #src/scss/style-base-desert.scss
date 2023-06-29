@@ -1,0 +1,288 @@
+@import 'null-style';
+@import 'base';
+@import 'preloader';
+//--------------------------------------
+:root {
+    --widthGex: 18vw;
+    --heightGex: calc(var(--widthGex)*1.066666666666667);
+    --cirkleNum: calc(var(--widthGex)/2.4);
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-image: url('../img/ocean.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    font-family: $fontFamilyBase;
+    padding: 2%;
+    &:after {
+        content: '';
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $blackColor;
+        opacity: 0.4;
+    }
+}
+
+footer {
+    display: flex;
+    font-size: 3vw;
+    color: $blackBullet;
+    background-color: rgba(255, 255, 255, 0.39);
+    color: $blackColor;
+}
+
+.btn {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    row-gap: 5vh;
+    button,
+    a {
+        display: block;
+        width: max-content;
+        height: max-content;
+        font-size: 4vw;
+        text-align: center;
+        padding: 5px;
+        border: 3px solid $goldColor;
+        background-color: $whiteColor;
+        color: $blackColor;
+        cursor: pointer;
+    }
+    a {
+        width: 80% !important;
+        background-color: $smokeColor !important;
+    }
+}
+
+.map {
+    position: relative;
+    z-index: 10;
+    width: max-content;
+    height: max-content;
+    padding: 2vw;
+    /**/
+    display: grid;
+    grid-template-columns: repeat(10, calc(var(--widthGex)/2));
+    grid-template-rows: repeat(5, calc(var(--heightGex)/2.66*2)) calc(var(--heightGex)/3);
+    gap: 1px;
+    &__gex-text {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: var( --cirkleNum);
+        height: var( --cirkleNum);
+        border-radius: 50%;
+        background-color: $greyBullet;
+        color: $blackColor;
+        font-size: 4vw;
+        font-weight: bold;
+        border: 2px solid $btnBlueDarkColor;
+    }
+    &__gex {
+        position: relative;
+        width: var(--widthGex);
+        height: var(--heightGex);
+        //width: max-content;
+        // height: max-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-position: center;
+        img {
+            width: var(--widthGex);
+            height: var(--heightGex);
+        }
+        &::before {
+            position: absolute;
+            content: '';
+            z-index: -100 !important;
+            top: -10%;
+            left: -10%;
+            width: 120%;
+            height: 120%;
+            opacity: 0.95;
+            background-image: url('../img/2.svg');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-position: center;
+        }
+    }
+}
+
+.block1 {
+    background-image: url('../img/1.png');
+}
+
+.block2 {
+    background-image: url('../img/2.png');
+}
+
+.block3 {
+    background-image: url('../img/3.png');
+}
+
+.block4 {
+    background-image: url('../img/4.png');
+}
+
+.block5 {
+    background-image: url('../img/5.png');
+}
+
+
+/*--1 линия--*/
+
+.gex-1 {
+    grid-column-start: 3;
+    grid-row-start: 1;
+}
+
+.gex-2 {
+    grid-column-start: 5;
+    grid-row-start: 1;
+}
+
+.gex-3 {
+    grid-column-start: 7;
+    grid-row-start: 1;
+}
+
+
+/*--2 линия--*/
+
+.gex-4 {
+    grid-column-start: 2;
+    grid-row-start: 2;
+}
+
+.gex-5 {
+    grid-column-start: 4;
+    grid-row-start: 2;
+}
+
+.gex-6 {
+    grid-column-start: 6;
+    grid-row-start: 2;
+}
+
+.gex-7 {
+    grid-column-start: 8;
+    grid-row-start: 2;
+}
+
+
+/*--3 линия--*/
+
+.gex-8 {
+    grid-column-start: 1;
+    grid-row-start: 3;
+}
+
+.gex-9 {
+    grid-column-start: 3;
+    grid-row-start: 3;
+}
+
+.gex-10 {
+    grid-column-start: 5;
+    grid-row-start: 3;
+}
+
+.gex-11 {
+    grid-column-start: 7;
+    grid-row-start: 3;
+}
+
+.gex-12 {
+    grid-column-start: 9;
+    grid-row-start: 3;
+}
+
+
+/*--4 линия--*/
+
+.gex-13 {
+    grid-column-start: 2;
+    grid-row-start: 4;
+}
+
+.gex-14 {
+    grid-column-start: 4;
+    grid-row-start: 4;
+}
+
+.gex-15 {
+    grid-column-start: 6;
+    grid-row-start: 4;
+}
+
+.gex-16 {
+    grid-column-start: 8;
+    grid-row-start: 4;
+}
+
+
+/*--5 линия--*/
+
+.gex-17 {
+    grid-column-start: 3;
+    grid-row-start: 5;
+}
+
+.gex-18 {
+    grid-column-start: 5;
+    grid-row-start: 5;
+}
+
+.gex-19 {
+    grid-column-start: 7;
+    grid-row-start: 5;
+}
+
+@media screen and (orientation: landscape) {
+     :root {
+        --widthGex: 15vh;
+        --heightGex: calc(var(--widthGex)*1.066666666666667);
+        --cirkleNum: calc(var(--widthGex)/3);
+    }
+    body {
+        background-image: url('../img/ocean2.jpg');
+    }
+    .btn {
+        button,
+        a {
+            font-size: 2vw;
+        }
+    }
+    .map {
+        &__gex-text {
+            font-size: 1.5vw;
+        }
+    }
+    footer {
+        font-size: 1vw;
+    }
+}

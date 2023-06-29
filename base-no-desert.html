@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style-base-desert.css">
+    <title>Catan Map генератор</title>
+</head>
+
+<body class="lock" id="body">
+    <div class="btn">
+
+        <a href="index.html">Вернуться к выбору</a>
+        <button id="generateMapGex">Сгенерировать карту</button>
+        <button id="generateNumberGex">Сгенерировать цифры</button>
+    </div>
+    <section class="map">
+        <!--'1 линия'-->
+        <div class="map__gex gex-1" data-gex="1" id="gex1">
+            <h2 class="map__gex-text" id="gexNumber1">1</h2>
+        </div>
+        <div class="map__gex gex-2" data-gex="2" id="gex2">
+            <h2 class="map__gex-text" id="gexNumber2">1</h2>
+        </div>
+        <div class="map__gex gex-3" data-gex="3" id="gex3">
+            <h2 class="map__gex-text" id="gexNumber3">1</h2>
+        </div>
+        <!--'2 линия'-->
+        <div class="map__gex gex-4" data-gex="4" id="gex4">
+            <h2 class="map__gex-text" id="gexNumber4">1</h2>
+        </div>
+        <div class="map__gex gex-5" data-gex="5" id="gex5">
+            <h2 class="map__gex-text" id="gexNumber5">1</h2>
+        </div>
+        <div class="map__gex gex-6" data-gex="1" id="gex6">
+            <h2 class="map__gex-text" id="gexNumber6">1</h2>
+        </div>
+        <div class="map__gex gex-7" data-gex="2" id="gex7">
+            <h2 class="map__gex-text" id="gexNumber7">1</h2>
+        </div>
+        <!--'3 линия'-->
+        <div class="map__gex gex-8" data-gex="1" id="gex8">
+            <h2 class="map__gex-text" id="gexNumber8">1</h2>
+        </div>
+        <div class="map__gex gex-9" data-gex="2" id="gex9">
+            <h2 class="map__gex-text" id="gexNumber9">1</h2>
+        </div>
+        <div class="map__gex gex-10" data-gex="3" id="gex10">
+            <h2 class="map__gex-text" id="gexNumber10">1</h2>
+        </div>
+        <div class="map__gex gex-11" data-gex="4" id="gex11">
+            <h2 class="map__gex-text" id="gexNumber11">1</h2>
+        </div>
+        <div class="map__gex gex-12" data-gex="5" id="gex12">
+            <h2 class="map__gex-text" id="gexNumber12">1</h2>
+        </div>
+        <!--'4 линия'-->
+        <div class="map__gex gex-13" data-gex="3" id="gex13">
+            <h2 class="map__gex-text" id="gexNumber13">1</h2>
+        </div>
+        <div class="map__gex gex-14" data-gex="4" id="gex14">
+            <h2 class="map__gex-text" id="gexNumber14">1</h2>
+        </div>
+        <div class="map__gex gex-15" data-gex="5" id="gex15">
+            <h2 class="map__gex-text" id="gexNumber15">1</h2>
+        </div>
+        <div class="map__gex gex-16" data-gex="1" id="gex16">
+            <h2 class="map__gex-text" id="gexNumber16">1</h2>
+        </div>
+        <!--'5 линия'-->
+        <div class="map__gex gex-17" data-gex="2" id="gex17">
+            <h2 class="map__gex-text" id="gexNumber17">1</h2>
+        </div>
+        <div class="map__gex gex-18" data-gex="3" id="gex18">
+            <h2 class="map__gex-text" id="gexNumber18">1</h2>
+        </div>
+        <div class="map__gex gex-19" data-gex="4" id="gex19">
+            <h2 class="map__gex-text" id="gexNumber19">1</h2>
+        </div>
+    </section>
+    <footer>
+        <div class="footer__text">Фото фона:<a href="https://ru.freepik.com/free-photo/mesmerizing-shot-of-crystal-blue-ocean-waves_17530073.htm#query=%D0%B2%D0%BE%D0%B4%D0%B0%20%D0%B2%D0%B8%D0%B4%20%D1%81%D0%B2%D0%B5%D1%80%D1%85%D1%83&position=5&from_view=search&track=ais" target="_blank">Изображение
+                от wirestock</a> на Freepik</div>
+    </footer>
+    <!--'прелоадер'-->
+    <section class="preloader preloader-visible" id="preloader">
+        <h2 class="preloader__title">CATAN</h2>
+        <h2 class="preloader__subtitle">Генератор карты</h2>
+        <div class="preloader__text">Загрузка страницы</div>
+        <div class="preloader__loader"></div>
+    </section>
+    <!--'SCRIPT'-->
+    <script src="js/preloader.js"></script>
+    <script src="js/base-no-desert.js"></script>
+    <script src="js/index.js"></script>
+
+</body>
+
+</html>
