@@ -47,31 +47,46 @@ footer {
     color: $blackColor;
 }
 
-.btn {
+.btn-group {
     width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.btn {
+    width: max-content;
     height: max-content;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    row-gap: 5vh;
-    button,
-    a {
-        display: block;
-        width: max-content;
-        height: max-content;
-        font-size: 4vw;
-        text-align: center;
-        padding: 5px;
-        border: 3px solid $goldColor;
-        background-color: $whiteColor;
-        color: $blackColor;
-        cursor: pointer;
-    }
-    a {
-        width: 80% !important;
-        background-color: $smokeColor !important;
-    }
+    font-size: 2vw;
+    text-align: center;
+    padding: 5px;
+    border: 3px solid $goldColor;
+    background-color: $whiteColor;
+    color: $blackColor;
+    cursor: pointer;
+}
+
+.romaining-number-tokens {
+    width: 25vw;
+    height: 8vw;
+    font-size: 3vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border: 3px solid $goldColor;
+    background-color: $whiteColor;
+    color: $blackColor;
+}
+
+a.btn {
+    width: 80% !important;
+    background-color: $smokeColor !important;
 }
 
 .map {

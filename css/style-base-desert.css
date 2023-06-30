@@ -236,8 +236,22 @@ footer {
   background-color: rgba(255, 255, 255, 0.39);
   color: #000000; }
 
-.btn {
+.btn-group {
   width: 100%;
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.btn {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
@@ -246,31 +260,41 @@ footer {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-  justify-content: space-around;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  row-gap: 5vh; }
-  .btn button,
-  .btn a {
-    display: block;
-    width: -webkit-max-content;
-    width: -moz-max-content;
-    width: max-content;
-    height: -webkit-max-content;
-    height: -moz-max-content;
-    height: max-content;
-    font-size: 4vw;
-    text-align: center;
-    padding: 5px;
-    border: 3px solid #be9143;
-    background-color: #ffffff;
-    color: #000000;
-    cursor: pointer; }
-  .btn a {
-    width: 80% !important;
-    background-color: #cccccc !important; }
+  font-size: 2vw;
+  text-align: center;
+  padding: 5px;
+  border: 3px solid #be9143;
+  background-color: #ffffff;
+  color: #000000;
+  cursor: pointer; }
+
+.romaining-number-tokens {
+  width: 25vw;
+  height: 8vw;
+  font-size: 3vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 5px;
+  border: 3px solid #be9143;
+  background-color: #ffffff;
+  color: #000000; }
+
+a.btn {
+  width: 80% !important;
+  background-color: #cccccc !important; }
 
 .map {
   position: relative;
