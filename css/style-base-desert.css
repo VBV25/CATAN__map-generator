@@ -188,8 +188,8 @@ ul li {
 
 :root {
   --widthGex: 18vw;
-  --heightGex: calc(var(--widthGex)*1.066666666666667);
-  --cirkleNum: calc(var(--widthGex)/2.4); }
+  --heightGex: calc(var(--widthGex) * 1.066666666666667);
+  --cirkleNum: calc(var(--widthGex) / 2.4); }
 
 html,
 body {
@@ -296,6 +296,16 @@ a.btn {
   width: 80% !important;
   background-color: #cccccc !important; }
 
+.noNumber .map__gex-text {
+  background-color: #f87070;
+  font-weight: 900 !important; }
+
+.popular-number .map__gex-text {
+  color: red;
+  background-color: #cccccc;
+  font-weight: 900 !important;
+  font-size: 2.2vw; }
+
 .map {
   position: relative;
   z-index: 10;
@@ -309,10 +319,10 @@ a.btn {
   /**/
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (calc(var(--widthGex)/2))[10];
-  grid-template-columns: repeat(10, calc(var(--widthGex)/2));
-  -ms-grid-rows: (calc(var(--heightGex)/2.66*2))[5] calc(var(--heightGex)/3);
-  grid-template-rows: repeat(5, calc(var(--heightGex)/2.66*2)) calc(var(--heightGex)/3);
+  -ms-grid-columns: (calc(var(--widthGex) / 2))[10];
+  grid-template-columns: repeat(10, calc(var(--widthGex) / 2));
+  -ms-grid-rows: (calc(var(--heightGex) / 2.66 * 2))[5] calc( var(--heightGex) / 3);
+  grid-template-rows: repeat(5, calc(var(--heightGex) / 2.66 * 2)) calc( var(--heightGex) / 3);
   gap: 1px; }
   .map__gex-text {
     position: absolute;
@@ -503,8 +513,8 @@ a.btn {
 @media screen and (orientation: landscape) {
   :root {
     --widthGex: 15vh;
-    --heightGex: calc(var(--widthGex)*1.066666666666667);
-    --cirkleNum: calc(var(--widthGex)/3); }
+    --heightGex: calc(var(--widthGex) * 1.066666666666667);
+    --cirkleNum: calc(var(--widthGex) / 3); }
   body {
     background-image: url("../img/ocean2.jpg"); }
   .btn button,
