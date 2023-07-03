@@ -265,8 +265,8 @@ a.btn {
   /**/
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (calc(var(--widthGex) / 2))[10];
-  grid-template-columns: repeat(10, calc(var(--widthGex) / 2));
+  -ms-grid-columns: (calc(var(--widthGex) / 2))[8];
+  grid-template-columns: repeat(8, calc(var(--widthGex) / 2));
   -ms-grid-rows: (calc(var(--heightGex) / 2.66 * 2))[5] calc( var(--heightGex) / 3);
   grid-template-rows: repeat(5, calc(var(--heightGex) / 2.66 * 2)) calc( var(--heightGex) / 3);
   gap: 1px; }
@@ -350,109 +350,79 @@ a.btn {
   -ms-grid-row: 1;
   grid-row-start: 1; }
 
-.gex-3 {
-  -ms-grid-column: 7;
-  grid-column-start: 7;
-  -ms-grid-row: 1;
-  grid-row-start: 1; }
-
 /*--2 линия--*/
-.gex-4 {
+.gex-3 {
   -ms-grid-column: 2;
   grid-column-start: 2;
   -ms-grid-row: 2;
   grid-row-start: 2; }
 
-.gex-5 {
+.gex-4 {
   -ms-grid-column: 4;
   grid-column-start: 4;
   -ms-grid-row: 2;
   grid-row-start: 2; }
 
-.gex-6 {
+.gex-5 {
   -ms-grid-column: 6;
   grid-column-start: 6;
   -ms-grid-row: 2;
   grid-row-start: 2; }
 
-.gex-7 {
-  -ms-grid-column: 8;
-  grid-column-start: 8;
-  -ms-grid-row: 2;
-  grid-row-start: 2; }
-
 /*--3 линия--*/
-.gex-8 {
+.gex-6 {
   -ms-grid-column: 1;
   grid-column-start: 1;
   -ms-grid-row: 3;
   grid-row-start: 3; }
 
-.gex-9 {
+.gex-7 {
   -ms-grid-column: 3;
   grid-column-start: 3;
   -ms-grid-row: 3;
   grid-row-start: 3; }
 
-.gex-10 {
+.gex-8 {
   -ms-grid-column: 5;
   grid-column-start: 5;
   -ms-grid-row: 3;
   grid-row-start: 3; }
 
-.gex-11 {
+.gex-9 {
   -ms-grid-column: 7;
   grid-column-start: 7;
   -ms-grid-row: 3;
   grid-row-start: 3; }
 
-.gex-12 {
-  -ms-grid-column: 9;
-  grid-column-start: 9;
-  -ms-grid-row: 3;
-  grid-row-start: 3; }
-
 /*--4 линия--*/
-.gex-13 {
+.gex-10 {
   -ms-grid-column: 2;
   grid-column-start: 2;
   -ms-grid-row: 4;
   grid-row-start: 4; }
 
-.gex-14 {
+.gex-11 {
   -ms-grid-column: 4;
   grid-column-start: 4;
   -ms-grid-row: 4;
   grid-row-start: 4; }
 
-.gex-15 {
+.gex-12 {
   -ms-grid-column: 6;
   grid-column-start: 6;
   -ms-grid-row: 4;
   grid-row-start: 4; }
 
-.gex-16 {
-  -ms-grid-column: 8;
-  grid-column-start: 8;
-  -ms-grid-row: 4;
-  grid-row-start: 4; }
-
 /*--5 линия--*/
-.gex-17 {
+.gex-13 {
   -ms-grid-column: 3;
   grid-column-start: 3;
   -ms-grid-row: 5;
   grid-row-start: 5; }
 
-.gex-18 {
+.gex-14 {
   -ms-grid-column: 5;
   grid-column-start: 5;
-  -ms-grid-row: 5;
-  grid-row-start: 5; }
-
-.gex-19 {
-  -ms-grid-column: 7;
-  grid-column-start: 7;
   -ms-grid-row: 5;
   grid-row-start: 5; }
 

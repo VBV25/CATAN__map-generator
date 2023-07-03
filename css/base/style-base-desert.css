@@ -42,6 +42,10 @@ ul li {
   list-style: none; }
 
 /*-----*/
+a.disabled {
+  opacity: 0.2 !important;
+  cursor: none !important; }
+
 .preloader-none {
   display: none; }
 

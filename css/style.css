@@ -42,63 +42,10 @@ ul li {
   list-style: none; }
 
 /*-----*/
-/*
-//флекс элемент по центру
-@mixin flCent($jusCon: center, $alIt: center) {
-  display: flex;
-  justify-content: $jusCon;
-  align-items: $alIt;
-}
+a.disabled {
+  opacity: 0.2 !important;
+  cursor: none !important; }
 
-//флекс элемент слева центр
-@mixin flStartCen($jusCon: start, $alIt: center) {
-  display: flex;
-  justify-content: $jusCon;
-  align-items: $alIt;
-}
-
-//флекс элемент: по вертикали центр, горизонтально - разнесено по краям
-@mixin flexSpBeCent($jusCon: space-between, $alIt: center) {
-  display: flex;
-  justify-content: $jusCon;
-  align-items: $alIt;
-}
-
-//грид элемент: по вертикали центр, горизонтально - разнесено по краям
-@mixin gridSpBeCent($jusCon: space-between, $alIt: center) {
-  display: grid;
-  justify-content: $jusCon;
-  align-items: $alIt;
-}
-
-//грид центр
-@mixin gridCent($jusCon: center, $alIt: center) {
-  display: grid;
-  justify-content: $jusCon;
-  align-items: $alIt;
-}
-
-//обводка текста
-@mixin textBorderWhite {
-  text-shadow: -0 -2px 2px $whiteColor, 0 -2px 2px $whiteColor,
-    -0 2px 2px $whiteColor, 0 2px 2px $whiteColor, -2px -0 2px $whiteColor,
-    2px -0 2px $whiteColor, -2px 0 2px $whiteColor, 2px 0 2px $whiteColor,
-    -2px -2px 2px $whiteColor, 2px -2px 2px $whiteColor,
-    -2px 2px 2px $whiteColor, 2px 2px 2px $whiteColor, -2px -2px 2px $whiteColor,
-    2px -2px 2px $whiteColor, -2px 2px 2px $whiteColor, 2px 2px 2px $whiteColor;
-}
-
-
-
-@mixin textBorderBlack {
-  text-shadow: -0 -1px 1px $blackColor, 0 -1px 1px $blackColor,
-    -0 1px 1px $blackColor, 0 1px 1px $blackColor, -1px -0 1px $blackColor,
-    1px -0 1px $blackColor, -1px 0 1px $blackColor, 1px 0 1px $blackColor,
-    -1px -1px 1px $blackColor, 1px -1px 1px $blackColor,
-    -1px 1px 1px $blackColor, 1px 1px 1px $blackColor, -1px -1px 1px $blackColor,
-    1px -1px 1px $blackColor, -1px 1px 1px $blackColor, 1px 1px 1px $blackColor;
-}
-*/
 .preloader-none {
   display: none; }
 
@@ -186,13 +133,14 @@ ul li {
     -webkit-transform: rotate(1turn);
     transform: rotate(1turn); } }
 
-html,
-body {
+html {
   width: 100%;
-  height: 100%;
-  font-family: "Open Sans", sans-serif; }
+  min-height: 100vh; }
 
 body {
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px 10px;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -207,10 +155,11 @@ body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-image: url("../img/ocean.jpg");
+  background-image: url("../img/ocean2.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  background-position: center; }
+  background-position: center;
+  font-family: "Open Sans", sans-serif; }
   body:after {
     content: '';
     z-index: -1;
@@ -231,9 +180,23 @@ b {
   height: -moz-max-content;
   height: max-content;
   text-align: center;
-  font-size: 6vw;
+  font-size: 2.5vw;
   font-weight: 900;
   line-height: 110%;
+  font-style: normal;
+  color: #ffffff;
+  text-shadow: 0 -1px 1px #000000, 0 -1px 1px #000000, 0 1px 1px #000000, 0 1px 1px #000000, -1px 0 1px #000000, 1px 0 1px #000000, -1px 0 1px #000000, 1px 0 1px #000000, -1px -1px 1px #000000, 1px -1px 1px #000000, -1px 1px 1px #000000, 1px 1px 1px #000000, -1px -1px 1px #000000, 1px -1px 1px #000000, -1px 1px 1px #000000, 1px 1px 1px #000000; }
+
+.subtitle {
+  width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  margin-bottom: 25px;
+  text-align: center;
+  font-size: 1.5vw;
+  font-weight: 700;
+  line-height: 120%;
   font-style: normal;
   color: #ffffff;
   text-shadow: 0 -1px 1px #000000, 0 -1px 1px #000000, 0 1px 1px #000000, 0 1px 1px #000000, -1px 0 1px #000000, 1px 0 1px #000000, -1px 0 1px #000000, 1px 0 1px #000000, -1px -1px 1px #000000, 1px -1px 1px #000000, -1px 1px 1px #000000, 1px 1px 1px #000000, -1px -1px 1px #000000, 1px -1px 1px #000000, -1px 1px 1px #000000, 1px 1px 1px #000000; }
@@ -273,11 +236,21 @@ b {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  font-size: 3vw;
+  font-size: 1.5vw;
   padding: 5px;
   border: 4px solid #be9143;
   color: #000000;
   background-color: #cccccc; }
+
+.sea-group-map {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
 
 footer {
   position: relative;
@@ -292,9 +265,9 @@ footer {
   background-color: rgba(255, 255, 255, 0.39);
   color: #000000; }
 
-@media screen and (orientation: landscape) {
+@media screen and (orientation: portrait) {
   body {
-    background-image: url("../img/ocean2.jpg"); }
+    background-image: url("../img/ocean.jpg"); }
   .title {
     font-size: 4vw;
     font-weight: 900;

@@ -1,24 +1,26 @@
-@import 'null-style';
-@import 'base';
-@import 'preloader';
+@import 'param-nul-base-preload/null-style';
+@import 'param-nul-base-preload/base';
+@import 'param-nul-base-preload/preloader';
 //--------------------------------------
-html,
-body {
+html {
     width: 100%;
-    height: 100%;
-    font-family: $fontFamilyBase;
+    min-height: 100vh;
 }
 
 body {
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px 10px;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    background-image: url('../img/ocean.jpg');
+    background-image: url('../img/ocean2.jpg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: center;
+    font-family: $fontFamilyBase;
     &:after {
         content: '';
         z-index: -1;
@@ -36,13 +38,27 @@ b {
     font-weight: 900;
 }
 
+.version-group {}
+
 .title {
     width: 100%;
     height: max-content;
     text-align: center;
-    @include fontSize(6vw,
+    @include fontSize(2.5vw,
     110%,
     900);
+    color: $whiteColor;
+    @include textBorderBlack;
+}
+
+.subtitle {
+    width: 100%;
+    height: max-content;
+    margin-bottom: 25px;
+    text-align: center;
+    @include fontSize(1.5vw,
+    120%,
+    700);
     color: $whiteColor;
     @include textBorderBlack;
 }
@@ -65,11 +81,17 @@ b {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 3vw;
+    font-size: 1.5vw;
     padding: 5px;
     border: 4px solid $goldColor;
     color: $blackColor;
     background-color: $smokeColor;
+}
+
+.sea-group-map {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 footer {
@@ -84,9 +106,9 @@ footer {
     color: $blackColor;
 }
 
-@media screen and (orientation: landscape) {
+@media screen and (orientation: portrait) {
     body {
-        background-image: url('../img/ocean2.jpg');
+        background-image: url('../img/ocean.jpg');
     }
     .title {
         @include fontSize(4vw,
