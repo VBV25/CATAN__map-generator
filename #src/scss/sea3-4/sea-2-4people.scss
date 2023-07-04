@@ -3,7 +3,7 @@
 @import '../param-nul-base-preload/preloader';
 //--------------------------------------
 :root {
-    --widthGex: 18vw;
+    --widthGex: 13vw;
     --heightGex: calc(var(--widthGex) * 1.066666666666667);
     --cirkleNum: calc(var(--widthGex) / 2.5);
 }
@@ -115,8 +115,8 @@ a.btn {
     padding: 2vw;
     /**/
     display: grid;
-    grid-template-columns: repeat(8, calc(var(--widthGex) / 2));
-    grid-template-rows: repeat(5, calc(var(--heightGex) / 2.66 * 2)) calc( var(--heightGex) / 3);
+    grid-template-columns: repeat(12, calc(var(--widthGex) / 2));
+    grid-template-rows: repeat(7, calc(var(--heightGex) / 2.66 * 2)) calc( var(--heightGex) / 3);
     gap: 1px;
     &__gex-text {
         position: absolute;
@@ -132,7 +132,8 @@ a.btn {
         font-weight: bold;
         border: 2px solid $btnBlueDarkColor;
     }
-    &__gex {
+    &__gex,
+    &__gex-see {
         position: relative;
         width: var(--widthGex);
         height: var(--heightGex);
@@ -144,10 +145,6 @@ a.btn {
         background-repeat: no-repeat;
         background-size: 100% 100%;
         background-position: center;
-        img {
-            width: var(--widthGex);
-            height: var(--heightGex);
-        }
         &::before {
             position: absolute;
             content: '';
@@ -158,6 +155,23 @@ a.btn {
             height: 120%;
             opacity: 0.95;
             background-image: url('../img/2.svg');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-position: center;
+        }
+    }
+    &__gex-see {
+        background-image: url('../img/7.png');
+        &::before {
+            position: absolute;
+            content: '';
+            z-index: -100 !important;
+            top: -5%;
+            left: -5%;
+            width: 110%;
+            height: 110%;
+            opacity: 0.95;
+            background-image: url('../img/6.svg');
             background-repeat: no-repeat;
             background-size: 100% 100%;
             background-position: center;
@@ -186,7 +200,7 @@ a.btn {
 }
 
 
-/*--1 линия--*/
+/*--1 остров-малый-*/
 
 .gex-1 {
     grid-column-start: 3;
@@ -194,85 +208,193 @@ a.btn {
 }
 
 .gex-2 {
-    grid-column-start: 5;
-    grid-row-start: 1;
-}
-
-
-/*--2 линия--*/
-
-.gex-3 {
     grid-column-start: 2;
     grid-row-start: 2;
 }
 
-.gex-4 {
-    grid-column-start: 4;
-    grid-row-start: 2;
-}
-
-.gex-5 {
-    grid-column-start: 6;
-    grid-row-start: 2;
-}
-
-
-/*--3 линия--*/
-
-.gex-6 {
+.gex-3 {
     grid-column-start: 1;
     grid-row-start: 3;
 }
 
-.gex-7 {
+.gex-4 {
     grid-column-start: 3;
     grid-row-start: 3;
 }
 
-.gex-8 {
-    grid-column-start: 5;
-    grid-row-start: 3;
+
+/*--2 остров-малый-*/
+
+.gex-5 {
+    grid-column-start: 9;
+    grid-row-start: 5;
 }
 
+.gex-6 {
+    grid-column-start: 11;
+    grid-row-start: 5;
+}
+
+.gex-7 {
+    grid-column-start: 10;
+    grid-row-start: 6;
+}
+
+.gex-8 {
+    grid-column-start: 9;
+    grid-row-start: 7;
+}
+
+
+/*--3 остров-большой-право-верх-*/
+
 .gex-9 {
+    grid-column-start: 7;
+    grid-row-start: 1;
+}
+
+.gex-10 {
+    grid-column-start: 9;
+    grid-row-start: 1;
+}
+
+.gex-11 {
+    grid-column-start: 6;
+    grid-row-start: 2;
+}
+
+.gex-12 {
+    grid-column-start: 8;
+    grid-row-start: 2;
+}
+
+.gex-13 {
+    grid-column-start: 10;
+    grid-row-start: 2;
+}
+
+.gex-14 {
     grid-column-start: 7;
     grid-row-start: 3;
 }
 
-
-/*--4 линия--*/
-
-.gex-10 {
-    grid-column-start: 2;
-    grid-row-start: 4;
+.gex-15 {
+    grid-column-start: 9;
+    grid-row-start: 3;
 }
 
-.gex-11 {
-    grid-column-start: 4;
-    grid-row-start: 4;
-}
-
-.gex-12 {
+.gex-16 {
     grid-column-start: 6;
     grid-row-start: 4;
 }
 
 
-/*--5 линия--*/
+/*--4 остров-большой-лево-низ-*/
 
-.gex-13 {
+.gex-17 {
+    grid-column-start: 1;
+    grid-row-start: 5;
+}
+
+.gex-18 {
     grid-column-start: 3;
     grid-row-start: 5;
 }
 
-.gex-14 {
+.gex-19 {
+    grid-column-start: 2;
+    grid-row-start: 6;
+}
+
+.gex-20 {
+    grid-column-start: 4;
+    grid-row-start: 6;
+}
+
+.gex-21 {
+    grid-column-start: 6;
+    grid-row-start: 6;
+}
+
+.gex-22 {
+    grid-column-start: 3;
+    grid-row-start: 7;
+}
+
+.gex-23 {
+    grid-column-start: 5;
+    grid-row-start: 7;
+}
+
+
+/*------МОРЕ-------*/
+
+.gex-see-1 {
+    grid-column-start: 5;
+    grid-row-start: 1;
+}
+
+.gex-see-2 {
+    grid-column-start: 4;
+    grid-row-start: 2;
+}
+
+.gex-see-3 {
+    grid-column-start: 5;
+    grid-row-start: 3;
+}
+
+.gex-see-4 {
+    grid-column-start: 4;
+    grid-row-start: 4;
+}
+
+.gex-see-5 {
+    grid-column-start: 2;
+    grid-row-start: 4;
+}
+
+.gex-see-6 {
     grid-column-start: 5;
     grid-row-start: 5;
 }
 
+.gex-see-7 {
+    grid-column-start: 7;
+    grid-row-start: 5;
+}
+
+.gex-see-8 {
+    grid-column-start: 8;
+    grid-row-start: 6;
+}
+
+.gex-see-9 {
+    grid-column-start: 7;
+    grid-row-start: 7;
+}
+
+.gex-see-10 {
+    grid-column-start: 8;
+    grid-row-start: 4;
+}
+
+.gex-see-11 {
+    grid-column-start: 10;
+    grid-row-start: 4;
+}
+
+.gex-see-12 {
+    grid-column-start: 11;
+    grid-row-start: 3;
+}
+
+
+/*----------*/
+
 @media screen and (orientation: landscape) {
      :root {
-        --widthGex: 18vh;
+        --widthGex: 13vh;
         --heightGex: calc(var(--widthGex) * 1.066666666666667);
         --cirkleNum: calc(var(--widthGex) / 2.7);
     }

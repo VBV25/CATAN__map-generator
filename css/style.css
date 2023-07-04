@@ -46,6 +46,10 @@ a.disabled {
   opacity: 0.2 !important;
   cursor: none !important; }
 
+button:disabled {
+  opacity: 0.2;
+  cursor: none; }
+
 .preloader-none {
   display: none; }
 

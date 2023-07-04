@@ -26,6 +26,11 @@ a.disabled {
     cursor: none !important;
 }
 
+button:disabled {
+    opacity: 0.2;
+    cursor: none;
+}
+
 //----------------------миксины------------------------------------------- 
 //вставка изображения как фона(без ссылки на изображение)
 @mixin bgImg($bgImSize: 100% 100%, $bgPosition: center, $bgRepeat: no-repeat) {
