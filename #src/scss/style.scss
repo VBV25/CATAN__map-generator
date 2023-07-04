@@ -106,6 +106,12 @@ footer {
     color: $blackColor;
 }
 
+.sea-1-4people-btn {
+    border-color: rgb(10, 208, 10) !important;
+    background-color: rgb(182, 245, 182);
+    cursor: default;
+}
+
 @media screen and (orientation: portrait) {
     body {
         background-image: url('../img/ocean.jpg');

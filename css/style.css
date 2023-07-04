@@ -265,6 +265,11 @@ footer {
   background-color: rgba(255, 255, 255, 0.39);
   color: #000000; }
 
+.sea-1-4people-btn {
+  border-color: #0ad00a !important;
+  background-color: #b6f5b6;
+  cursor: default; }
+
 @media screen and (orientation: portrait) {
   body {
     background-image: url("../img/ocean.jpg"); }
