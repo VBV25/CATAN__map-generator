@@ -133,7 +133,8 @@ a.btn {
         border: 2px solid $btnBlueDarkColor;
     }
     &__gex,
-    &__gex-see {
+    &__gex-see,
+    &__gex-see-mini {
         position: relative;
         width: var(--widthGex);
         height: var(--heightGex);
@@ -149,10 +150,10 @@ a.btn {
             position: absolute;
             content: '';
             z-index: -100 !important;
-            top: -10%;
-            left: -10%;
-            width: 120%;
-            height: 120%;
+            top: -5%;
+            left: -5%;
+            width: 110%;
+            height: 110%;
             opacity: 0.95;
             background-image: url('../img/2.svg');
             background-repeat: no-repeat;
@@ -175,6 +176,13 @@ a.btn {
             background-repeat: no-repeat;
             background-size: 100% 100%;
             background-position: center;
+        }
+    }
+    &__gex-see-mini {
+        background-size: 50% 100%;
+        background-image: url('../img/8.png');
+        &::before {
+            background-image: unset
         }
     }
 }
@@ -387,6 +395,24 @@ a.btn {
 .gex-see-12 {
     grid-column-start: 11;
     grid-row-start: 3;
+}
+
+
+/*-пол моря*/
+
+.gex-see-80 {
+    grid-column-start: 1;
+    grid-row-start: 4;
+    margin-left: -1px;
+    background-position-x: left;
+}
+
+.gex-see-81 {
+    background-position-x: left;
+    grid-column-start: 11;
+    grid-row-start: 4;
+    margin-right: -1px;
+    transform: scaleX(-1);
 }
 
 

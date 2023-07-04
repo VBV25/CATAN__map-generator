@@ -302,7 +302,7 @@ a.btn {
     font-size: 2.6vw;
     font-weight: bold;
     border: 2px solid #08215d; }
-  .map__gex, .map__gex-see {
+  .map__gex, .map__gex-see, .map__gex-see-mini {
     position: relative;
     width: var(--widthGex);
     height: var(--heightGex);
@@ -318,14 +318,14 @@ a.btn {
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: center; }
-    .map__gex::before, .map__gex-see::before {
+    .map__gex::before, .map__gex-see::before, .map__gex-see-mini::before {
       position: absolute;
       content: '';
       z-index: -100 !important;
-      top: -10%;
-      left: -10%;
-      width: 120%;
-      height: 120%;
+      top: -5%;
+      left: -5%;
+      width: 110%;
+      height: 110%;
       opacity: 0.95;
       background-image: url("../img/2.svg");
       background-repeat: no-repeat;
@@ -346,6 +346,11 @@ a.btn {
       background-repeat: no-repeat;
       background-size: 100% 100%;
       background-position: center; }
+  .map__gex-see-mini {
+    background-size: 50% 100%;
+    background-image: url("../img/8.png"); }
+    .map__gex-see-mini::before {
+      background-image: unset; }
 
 .block1 {
   background-image: url("../img/1.png"); }
@@ -576,6 +581,26 @@ a.btn {
   grid-column-start: 11;
   -ms-grid-row: 3;
   grid-row-start: 3; }
+
+/*-пол моря*/
+.gex-see-80 {
+  -ms-grid-column: 1;
+  grid-column-start: 1;
+  -ms-grid-row: 4;
+  grid-row-start: 4;
+  margin-left: -1px;
+  background-position-x: left; }
+
+.gex-see-81 {
+  background-position-x: left;
+  -ms-grid-column: 11;
+  grid-column-start: 11;
+  -ms-grid-row: 4;
+  grid-row-start: 4;
+  margin-right: -1px;
+  -webkit-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+  transform: scaleX(-1); }
 
 /*----------*/
 @media screen and (orientation: landscape) {
