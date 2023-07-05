@@ -255,7 +255,8 @@ footer {
 
 a.btn {
   width: 100% !important;
-  background-color: #cccccc !important; }
+  background-color: #cccccc !important;
+  margin-bottom: 15px; }
 
 .noNumber .map__gex-text {
   background-color: #f87070;
