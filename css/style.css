@@ -173,6 +173,12 @@ body {
     width: 100%;
     height: 100%; }
 
+.portr-bg-img {
+  display: none; }
+
+.lans-bg-img {
+  display: block; }
+
 .content {
   position: relative;
   z-index: 5;
@@ -296,6 +302,10 @@ footer {
 @media screen and (orientation: portrait) {
   body {
     background-image: url("../img/ocean.jpg"); }
+  .portr-bg-img {
+    display: block; }
+  .lans-bg-img {
+    display: none; }
   .content {
     row-gap: 10px; }
   .title {
