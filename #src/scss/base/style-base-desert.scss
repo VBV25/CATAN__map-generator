@@ -354,3 +354,11 @@ a.btn {
         font-size: 1vw;
     }
 }
+
+#gex0 {
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    z-index: -1500;
+    opacity: 0;
+}

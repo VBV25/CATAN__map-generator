@@ -571,6 +571,23 @@ function numberCheckGex9999() {
 //
 //
 //
+//----ЕСЛИ РЕСУРСОВ БОЛЬШЕ ЧЕМ НУЖНО
+/*
+
+    while (quantityTreeGexArray > 5 || quantityTreeGexArray <= 3 ||
+        quantityRyeGexArray > 5 || quantityRyeGexArray <= 3 ||
+        quantityRamsGexArray > 5 || quantityRamsGexArray <= 3 ||
+        quantityClayGexArray > 4 || quantityClayGexArray < 3 ||
+        quantityStoneGexArray > 5 || quantityStoneGexArray < 3
+    ) {
+        console.log('ПОВТОР ФУНКЦИИ ГЕНЕРАЦИИ');
+
+        //клон основного массива гексов
+        gexMapAtrNumber = gexMapAtrNumberBase.slice(0)
+
+        initialStateArrayGexRes()
+        generateMap()
+    }*/
 //
 //
 /*
