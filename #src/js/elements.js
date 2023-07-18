@@ -605,3 +605,99 @@ if (gex9999.classList.contains('block4')) { console.log('глина'); } else {
 }
 gettingNewValuesGexNumber() 
 */
+
+
+
+/*
+let tree1 = tree[1];
+let tree2 = tree[2];
+let tree3 = tree[3];
+let tree4 = tree[4];
+let tree5 = tree[5];
+let tree6 = tree[6];
+
+//--------БАРАНЫ-------
+let rams1 = 0;
+let rams2 = 0;
+let rams3 = 0;
+let rams4 = 0;
+let rams5 = 0;
+let rams6 = 0;
+
+//--------РОЖЬ-------
+let rye1 = 0;
+let rye2 = 0;
+let rye3 = 0;
+let rye4 = 0;
+let rye5 = 0;
+let rye6 = 0;
+
+//--------ГЛИНА-------
+let clay1 = 0;
+let clay2 = 0;
+let clay3 = 0;
+let clay4 = 0;
+let clay5 = 0;
+let clay6 = 0;
+
+//--------КАМНИ-------
+let stone1 = 0;
+let stone2 = 0;
+let stone3 = 0;
+let stone4 = 0;
+let stone5 = 0;
+let stone6 = 0;
+*/
+
+
+console.log('-----КОНЕЦ-----');
+console.log(tree);
+console.log(rams);
+console.log(rye);
+console.log(clay);
+console.log(stone);
+console.log(gexNumberArray);
+console.log(`длинна массива --- ${gexNumberArray.lenght}`);
+
+//console.log(tree[1]);
+//console.log(rams[1]);
+//console.log(rye[1]);
+//console.log(stone[1]);
+
+
+//console.log('66666666-------!!!!----' + tree[6]);
+//console.log('66666666-------!!!!----' + rams[6]);
+
+//console.log('66666666-------!!!!----' + rye[6]);
+//console.log('66666666-------!!!!----' + stone[6]);
+
+
+/*
+       //
+       //---сортировка гексов по классам ресурсов(дерево,бараны,рожь,глина,камень)
+       function populatingArrayEachGexTextNum1() {
+           let allGexMap = document.getElementsByClassName('map__gex');
+           let allGexMapArray = Array.from(allGexMap);
+           allGexMapArray.forEach(function(element) {
+               let elementGexMap = element;
+               let elementGexMapChildrenNumtext = elementGexMap.children[0].textContent;
+               if (elementGexMapChildrenNumtext == 1) {
+                   arrayAllGexTextNum1.push(elementGexMap);
+                   element.classList.remove('popular-number');
+                   element.classList.add('noNumber');
+               } else if (
+                   elementGexMapChildrenNumtext == 6 ||
+                   elementGexMapChildrenNumtext == 8
+               ) {
+                   element.classList.remove('noNumber');
+                   element.classList.add('popular-number');
+               } else {
+                   element.classList.remove('popular-number');
+                   element.classList.remove('noNumber');
+               }
+           });
+       }
+       populatingArrayEachGexTextNum1();
+       //
+       console.log('----------ТОРМОЗИМ ЗАПОЛНЕНИЕ------------');
+   */
