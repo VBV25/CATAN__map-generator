@@ -1,0 +1,310 @@
+@import '../param-nul-base-preload/null-style';
+@import '../param-nul-base-preload/base';
+@import '../param-nul-base-preload/preloader';
+//--------------------------------------
+:root {
+    --widthGex: 11vw;
+    --heightGex: calc(var(--widthGex) * 1.066666666666667);
+    --cirkleNum: calc(var(--widthGex) / 2.5);
+}
+
+.map {
+    position: relative;
+    z-index: 10;
+    width: max-content;
+    height: max-content;
+    padding: 2vw;
+    /**/
+    display: grid;
+    grid-template-columns: repeat(12, calc(var(--widthGex) / 2));
+    grid-template-rows: repeat(7, calc(var(--heightGex) / 2.66 * 2)) calc( var(--heightGex) / 3);
+    gap: 1px;
+    &__gex-text {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: var(--cirkleNum);
+        height: var(--cirkleNum);
+        border-radius: 50%;
+        background-color: $greyBullet;
+        color: $blackColor;
+        font-size: 2.6vw;
+        font-weight: bold;
+        border: 2px solid $btnBlueDarkColor;
+    }
+    &__gex,
+    &__gex-see,
+    &__gex-see-mini {
+        position: relative;
+        width: var(--widthGex);
+        height: var(--heightGex);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-position: center;
+        &::before {
+            position: absolute;
+            content: '';
+            z-index: -100 !important;
+            top: -5%;
+            left: -5%;
+            width: 110%;
+            height: 110%;
+            opacity: 0.95;
+            background-image: url('../../img/2.svg');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-position: center;
+        }
+    }
+    &__gex-see {
+        background-image: url('../../img/7.png');
+        &::before {
+            position: absolute;
+            content: '';
+            z-index: -100 !important;
+            top: -5%;
+            left: -5%;
+            width: 110%;
+            height: 110%;
+            opacity: 0.95;
+            background-image: url('../../img/6.svg');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-position: center;
+        }
+    }
+    &__gex-see-mini {
+        background-size: 50% 100%;
+        &::before {
+            left: -32%;
+            background-image: url('../../img/8-left.svg');
+        }
+    }
+}
+
+
+/*--1 остров-правый-*/
+
+.gex-1 {
+    grid-column-start: 5;
+    grid-row-start: 1;
+}
+
+.gex-2 {
+    grid-column-start: 7;
+    grid-row-start: 1;
+}
+
+.gex-3 {
+    grid-column-start: 9;
+    grid-row-start: 1;
+}
+
+.gex-4 {
+    grid-column-start: 6;
+    grid-row-start: 2;
+}
+
+.gex-5 {
+    grid-column-start: 8;
+    grid-row-start: 2;
+}
+
+.gex-6 {
+    grid-column-start: 10;
+    grid-row-start: 2;
+}
+
+.gex-7 {
+    grid-column-start: 9;
+    grid-row-start: 3;
+}
+
+.gex-8 {
+    grid-column-start: 11;
+    grid-row-start: 3;
+}
+
+.gex-9 {
+    grid-column-start: 10;
+    grid-row-start: 4;
+}
+
+.gex-10 {
+    grid-column-start: 11;
+    grid-row-start: 5;
+}
+
+
+/*--2 остров-левый-*/
+
+.gex-11 {
+    grid-column-start: 2;
+    grid-row-start: 4;
+}
+
+.gex-12 {
+    grid-column-start: 1;
+    grid-row-start: 5;
+}
+
+.gex-13 {
+    grid-column-start: 3;
+    grid-row-start: 5;
+}
+
+.gex-14 {
+    grid-column-start: 2;
+    grid-row-start: 6;
+}
+
+.gex-15 {
+    grid-column-start: 4;
+    grid-row-start: 6;
+}
+
+.gex-16 {
+    grid-column-start: 3;
+    grid-row-start: 7;
+}
+
+.gex-17 {
+    grid-column-start: 5;
+    grid-row-start: 7;
+}
+
+
+/*------МОРЕ-------*/
+
+.gex-see-1 {
+    grid-column-start: 3;
+    grid-row-start: 1;
+}
+
+.gex-see-2 {
+    grid-column-start: 4;
+    grid-row-start: 2;
+}
+
+.gex-see-3 {
+    grid-column-start: 5;
+    grid-row-start: 3;
+}
+
+.gex-see-4 {
+    grid-column-start: 7;
+    grid-row-start: 3;
+}
+
+.gex-see-5 {
+    grid-column-start: 6;
+    grid-row-start: 4;
+}
+
+.gex-see-6 {
+    grid-column-start: 8;
+    grid-row-start: 4;
+}
+
+.gex-see-7 {
+    grid-column-start: 7;
+    grid-row-start: 5;
+}
+
+.gex-see-8 {
+    grid-column-start: 9;
+    grid-row-start: 5;
+}
+
+.gex-see-9 {
+    grid-column-start: 8;
+    grid-row-start: 6;
+}
+
+.gex-see-10 {
+    grid-column-start: 10;
+    grid-row-start: 6;
+}
+
+.gex-see-11 {
+    grid-column-start: 9;
+    grid-row-start: 7;
+}
+
+.gex-see-12 {
+    grid-column-start: 2;
+    grid-row-start: 2;
+}
+
+.gex-see-13 {
+    grid-column-start: 1;
+    grid-row-start: 3;
+}
+
+.gex-see-14 {
+    grid-column-start: 3;
+    grid-row-start: 3;
+}
+
+.gex-see-15 {
+    grid-column-start: 4;
+    grid-row-start: 4;
+}
+
+.gex-see-16 {
+    grid-column-start: 5;
+    grid-row-start: 5;
+}
+
+.gex-see-17 {
+    grid-column-start: 6;
+    grid-row-start: 6;
+}
+
+.gex-see-18 {
+    grid-column-start: 7;
+    grid-row-start: 7;
+}
+
+
+/*-пол моря*/
+
+.gex-see-80 {
+    background-image: url('../../img/8.png');
+    grid-column-start: 1;
+    grid-row-start: 1;
+    margin-left: -1px;
+    background-position-x: left;
+}
+
+.gex-see-81 {
+    background-image: url('../../img/8r.png');
+    background-position-x: left;
+    grid-column-start: 1;
+    grid-row-start: 1;
+    margin-right: -1px;
+    &::before {
+        left: -29%;
+        background-image: url('../../img/8-right.svg');
+    }
+}
+
+
+/*----------*/
+
+@media screen and (orientation: landscape) {
+     :root {
+        --widthGex: 11vh;
+        --heightGex: calc(var(--widthGex) * 1.066666666666667);
+        --cirkleNum: calc(var(--widthGex) / 2.7);
+    }
+    .map {
+        &__gex-text {
+            font-size: 1.6vw;
+        }
+    }
+}

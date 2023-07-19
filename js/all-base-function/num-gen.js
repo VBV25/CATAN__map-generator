@@ -240,3 +240,24 @@ const randomNumberCheckGex = function(generatedGex, comparisonToken1 = 1, compar
         return;
     }
 }
+
+//---ВЫДЕЛЯЕМ ЦИФРЫ 6 и 8 
+const populaNumberGex = () => {
+    let allGexMapArray = Array.from(document.getElementsByClassName('map__gex'));
+    allGexMapArray.forEach((element) => {
+        let elementGexMapChildrenNumtext = element.children[0].textContent;
+        if (elementGexMapChildrenNumtext == 1) {
+            element.classList.remove('popular-number');
+            element.classList.add('noNumber');
+        } else if (
+            elementGexMapChildrenNumtext == 6 ||
+            elementGexMapChildrenNumtext == 8
+        ) {
+            element.classList.remove('noNumber');
+            element.classList.add('popular-number');
+        } else {
+            element.classList.remove('popular-number');
+            element.classList.remove('noNumber');
+        }
+    });
+}

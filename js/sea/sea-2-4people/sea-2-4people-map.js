@@ -108,11 +108,19 @@ generateMapGexButton.onclick = function() {
         ramsGexArray.length > 5 ||
         clayGexArray.length >= 5 ||
         stoneGexArray.length >= 5 ||
-        gex16.dataset.gex == 'undefined' || gex8.dataset.gex == 'undefined' || gex1.dataset.gex == 'undefined' || gex17.dataset.gex == 'undefined'
+        gex16.dataset.gex == 'undefined' || gex8.dataset.gex == 'undefined' || gex1.dataset.gex == 'undefined' || gex17.dataset.gex == 'undefined' || gex21.dataset.gex == 'undefined' || gex22.dataset.gex == 'undefined' || gex23.dataset.gex == 'undefined' || gex19.dataset.gex == 'undefined'
     ) {
         romainingNumberTokens.textContent = ''
         initialStateArrayGexRes()
         gexMapAtrNumber = gexMapAtrNumberBase.slice(0)
         generateMap()
     }
+}
+
+//---ПОЛНЫЙ РАНДОМ ГЕКСОВ КАРТЫ---
+fullRandomMapGex.onclick = () => {
+    initialStateArrayGexRes()
+    gexMapAtrNumberFullRandom = [1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3]
+    allRandomGexMapGen(allMapGexNew)
+    gexMapPicture(allMapGex);
 }

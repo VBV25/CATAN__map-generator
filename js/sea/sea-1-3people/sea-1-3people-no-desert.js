@@ -104,3 +104,12 @@ generateMapGexButton.onclick = function() {
         generateMap()
     }
 }
+
+//---ПОЛНЫЙ РАНДОМ ГЕКСОВ КАРТЫ---
+
+fullRandomMapGex.onclick = () => {
+    initialStateArrayGexRes()
+    gexMapAtrNumberFullRandom = [1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 2]
+    allRandomGexMapGen(allMapGexNew)
+    gexMapPicture(allMapGex);
+}

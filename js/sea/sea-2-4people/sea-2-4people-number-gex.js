@@ -186,4 +186,5 @@ generateNumberGexBtn.onclick = function() {
     //----------------------------------------------------------
 
     romainingNumberTokens.textContent = gexNumberArray
+    populaNumberGex();
 };

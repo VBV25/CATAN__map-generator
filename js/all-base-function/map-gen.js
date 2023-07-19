@@ -1,22 +1,20 @@
 //кнопка генерации карты
 const generateMapGexButton = document.getElementById('generateMapGex');
+//кнопка ПОЛНОГО РАНДОМА генерации карты
+const fullRandomMapGex = document.getElementById('fullRandomMapGex');
 //поле для текста
 const romainingNumberTokens = document.getElementById('romainingNumberTokens');
 //ВСЕ блоки гексов карты
 let allMapGex = Array.from(document.getElementsByClassName('map__gex'));
+let allMapGexNew = allMapGex.slice(0)
 
 //---перемешивание массива--
 const shuffle = (array) => {
-    let m = array.length,
-        t, i;
     if (array.length > 0) {
-        while (m) {
-            i = Math.floor(Math.random() * m--)
-            t = array[m];
-            array[m] = array[i];
-            array[m] = t
+        for (let i = array.length - 1; i > 0; i--) {
+            let j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]]
         }
-        return array
     }
 }
 
@@ -69,9 +67,9 @@ const gexMapPicture = (allMapGexArray) => {
 //--получение рандомного числа из массива и его индекса--
 let randomIndexGexMapAtrNumber
 let randomGexMapAtrNumber
-const objectGexMapArrForRandom = () => {
-    randomIndexGexMapAtrNumber = Math.floor(Math.random() * gexMapAtrNumber.length)
-    randomGexMapAtrNumber = gexMapAtrNumber[randomIndexGexMapAtrNumber]
+const objectGexMapArrForRandom = (arr) => {
+    randomIndexGexMapAtrNumber = Math.floor(Math.random() * arr.length)
+    randomGexMapAtrNumber = arr[randomIndexGexMapAtrNumber]
 }
 
 //----очистка массивов с ресурсами
@@ -88,7 +86,7 @@ const initialStateArrayGexRes = () => {
 //вместо comparableGex... --- подставляем гексы с какими сравниваем (пример:gex2,gex3,gex4)
 const mapGenerationGex = (gexSerialNumber, comparableGex1 = gex0, comparableGex2 = gex0, comparableGex3 = gex0, comparableGex4 = gex0) => {
     shuffle(gexMapAtrNumber)
-    objectGexMapArrForRandom()
+    objectGexMapArrForRandom(gexMapAtrNumber)
     gexSerialNumber.setAttribute('data-gex', randomGexMapAtrNumber);
     if (gexSerialNumber.dataset.gex === comparableGex1.dataset.gex || gexSerialNumber.dataset.gex === comparableGex2.dataset.gex || gexSerialNumber.dataset.gex === comparableGex3.dataset.gex || gexSerialNumber.dataset.gex === comparableGex4.dataset.gex || gexSerialNumber.dataset.gex === undefined) {
         let newNumGexMapDatasetIndex;
@@ -103,4 +101,25 @@ const mapGenerationGex = (gexSerialNumber, comparableGex1 = gex0, comparableGex2
     } else {
         gexMapAtrNumber.splice(randomIndexGexMapAtrNumber, 1);
     }
+}
+
+//-------ПОЛНЫЙ РАНДОМ ГЕКСОВ---
+let gexMapAtrNumberFullRandom
+
+const arrayShuffle = () => {
+    for (let i = 0; i < 30; i++) {
+        shuffle(gexMapAtrNumberFullRandom)
+    }
+    console.log(gexMapAtrNumberFullRandom);
+
+    return gexMapAtrNumberFullRandom
+}
+
+const allRandomGexMapGen = (arrayGex) => {
+    arrayShuffle()
+    arrayGex.forEach((el) => {
+        objectGexMapArrForRandom(gexMapAtrNumberFullRandom)
+        el.dataset.gex = randomGexMapAtrNumber
+        gexMapAtrNumberFullRandom.splice(randomIndexGexMapAtrNumber, 1);
+    })
 }

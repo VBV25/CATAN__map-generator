@@ -3,7 +3,7 @@
 @import '../param-nul-base-preload/preloader';
 //--------------------------------------
 :root {
-    --widthGex: 18vw;
+    --widthGex: 14vw;
     --heightGex: calc(var(--widthGex) * 1.066666666666667);
     --cirkleNum: calc(var(--widthGex) / 2.5);
 }
@@ -37,8 +37,6 @@
         position: relative;
         width: var(--widthGex);
         height: var(--heightGex);
-        //width: max-content;
-        // height: max-content;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -58,7 +56,7 @@
             width: 120%;
             height: 120%;
             opacity: 0.95;
-            background-image: url('../img/2.svg');
+            background-image: url('../../img/2.svg');
             background-repeat: no-repeat;
             background-size: 100% 100%;
             background-position: center;
@@ -178,7 +176,7 @@
 
 @media screen and (orientation: landscape) {
      :root {
-        --widthGex: 18vh;
+        --widthGex: 14vh;
         --heightGex: calc(var(--widthGex) * 1.066666666666667);
         --cirkleNum: calc(var(--widthGex) / 2.7);
     }
