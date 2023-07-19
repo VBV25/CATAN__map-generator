@@ -3,108 +3,9 @@
 @import '../param-nul-base-preload/preloader';
 //--------------------------------------
 :root {
-    --widthGex: 13vw;
+    --widthGex: 11vw;
     --heightGex: calc(var(--widthGex) * 1.066666666666667);
     --cirkleNum: calc(var(--widthGex) / 2.5);
-}
-
-html,
-body {
-    width: 100%;
-    height: 100%;
-}
-
-body {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    background-image: url('../img/ocean.jpg');
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-position: center;
-    font-family: $fontFamilyBase;
-    padding: 2%;
-    &:after {
-        content: '';
-        z-index: -1;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: $blackColor;
-        opacity: 0.4;
-    }
-}
-
-footer {
-    display: flex;
-    font-size: 2vw;
-    color: $blackBullet;
-    background-color: rgba(255, 255, 255, 0.39);
-    color: $blackColor;
-}
-
-.btn-group {
-    width: 95%;
-    margin: 10px 0px 10px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    row-gap: 5px;
-}
-
-.btn {
-    width: max-content;
-    height: max-content;
-    padding: 2vh 2vw;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    font-size: 2.6vw;
-    font-weight: 800;
-    text-align: center;
-    padding: 8px;
-    border: 2px solid $goldColor;
-    background-color: $whiteColor;
-    color: $blackColor;
-    cursor: pointer;
-}
-
-.romaining-number-tokens {
-    width: 100%;
-    height: 10vw;
-    font-size: 3.5vw;
-    font-weight: 900;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 8px;
-    border: 2px solid $goldColor;
-    background-color: $whiteColor;
-    color: $blackColor;
-}
-
-a.btn {
-    width: 100% !important;
-    background-color: $smokeColor !important;
-}
-
-.noNumber .map__gex-text {
-    background-color: $errMessage;
-    font-size: 3.5vw;
-    font-weight: 900 !important;
-}
-
-.popular-number .map__gex-text {
-    color: red;
-    background-color: $smokeColor;
-    font-weight: 900 !important;
-    font-size: 3vw;
 }
 
 .map {
@@ -138,8 +39,6 @@ a.btn {
         position: relative;
         width: var(--widthGex);
         height: var(--heightGex);
-        //width: max-content;
-        // height: max-content;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -155,14 +54,14 @@ a.btn {
             width: 110%;
             height: 110%;
             opacity: 0.95;
-            background-image: url('../img/2.svg');
+            background-image: url('../../img/2.svg');
             background-repeat: no-repeat;
             background-size: 100% 100%;
             background-position: center;
         }
     }
     &__gex-see {
-        background-image: url('../img/7.png');
+        background-image: url('../../img/7.png');
         &::before {
             position: absolute;
             content: '';
@@ -172,7 +71,7 @@ a.btn {
             width: 110%;
             height: 110%;
             opacity: 0.95;
-            background-image: url('../img/6.svg');
+            background-image: url('../../img/6.svg');
             background-repeat: no-repeat;
             background-size: 100% 100%;
             background-position: center;
@@ -180,31 +79,11 @@ a.btn {
     }
     &__gex-see-mini {
         background-size: 50% 100%;
-        background-image: url('../img/8.png');
         &::before {
-            background-image: unset
+            left: -32%;
+            background-image: url('../../img/8-left.svg');
         }
     }
-}
-
-.block1 {
-    background-image: url('../img/1.png');
-}
-
-.block2 {
-    background-image: url('../img/2.png');
-}
-
-.block3 {
-    background-image: url('../img/3.png');
-}
-
-.block4 {
-    background-image: url('../img/4.png');
-}
-
-.block5 {
-    background-image: url('../img/5.png');
 }
 
 
@@ -401,6 +280,7 @@ a.btn {
 /*-пол моря*/
 
 .gex-see-80 {
+    background-image: url('../../img/8.png');
     grid-column-start: 1;
     grid-row-start: 4;
     margin-left: -1px;
@@ -408,11 +288,15 @@ a.btn {
 }
 
 .gex-see-81 {
+    background-image: url('../../img/8r.png');
     background-position-x: left;
-    grid-column-start: 11;
+    grid-column-start: 12;
     grid-row-start: 4;
     margin-right: -1px;
-    transform: scaleX(-1);
+    &::before {
+        left: -29%;
+        background-image: url('../../img/8-right.svg');
+    }
 }
 
 
@@ -420,57 +304,13 @@ a.btn {
 
 @media screen and (orientation: landscape) {
      :root {
-        --widthGex: 13vh;
+        --widthGex: 11vh;
         --heightGex: calc(var(--widthGex) * 1.066666666666667);
         --cirkleNum: calc(var(--widthGex) / 2.7);
-    }
-    body {
-        background-image: url('../img/ocean2.jpg');
-        flex-direction: row;
-    }
-    .btn-group {
-        width: max-content;
-        height: 100%;
-        margin: 10px 0px 10px;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        row-gap: 3vh;
-    }
-    .btn {
-        width: max-content;
-        height: max-content;
-        padding: 5px;
-        font-size: 1.8vw;
-    }
-    .romaining-number-tokens {
-        width: 20vw;
-        height: 10vw;
-        font-size: 3.5vw;
-        padding: 5px;
-        margin-top: 3vh;
-    }
-    a.btn {
-        width: max-content !important;
-        font-size: 2vw !important;
-        margin-bottom: 20vh;
-    }
-    .noNumber .map__gex-text {
-        font-size: 2.3vw;
-    }
-    .popular-number .map__gex-text {
-        font-size: 1.8vw;
     }
     .map {
         &__gex-text {
             font-size: 1.6vw;
         }
-    }
-    footer {
-        position: absolute;
-        bottom: 0;
-        font-size: 1vw;
     }
 }

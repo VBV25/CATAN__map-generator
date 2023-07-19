@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style-base-desert.css">
+    <!---------------'STYLE'---------------------->
+    <link rel="stylesheet" href="css/style-all-map.css">
+    <link rel="stylesheet" href="css/base/style-base-desert.css">
     <!---------------'FAVICON'---------------------->
     <link type="image/x-icon" href="img/2.svg" rel="icon">
     <!---------------------------------------------->
@@ -19,6 +21,9 @@
         <button class="btn" id="generateNumberGex">Сгенерировать цифры</button>
         <div class="romaining-number-tokens" id="romainingNumberTokens"></div>
     </div>
+    <!--'НУЛЕВОЙ ГЕКС СРАВНЕНИЯ'-->
+    <div data-gex="0" id="gex0"></div>
+
     <section class="map">
         <!--'1 линия'-->
         <div class="map__gex gex-1" data-gex="1" id="gex1">
@@ -84,8 +89,12 @@
         </div>
     </section>
     <footer>
-        <div class="footer__text">Фото фона:<a href="https://ru.freepik.com/free-photo/mesmerizing-shot-of-crystal-blue-ocean-waves_17530073.htm#query=%D0%B2%D0%BE%D0%B4%D0%B0%20%D0%B2%D0%B8%D0%B4%20%D1%81%D0%B2%D0%B5%D1%80%D1%85%D1%83&position=5&from_view=search&track=ais" target="_blank">Изображение
+        <div style="display: none;" class="footer__text">Фото фона:<a
+                href="https://ru.freepik.com/free-photo/mesmerizing-shot-of-crystal-blue-ocean-waves_17530073.htm#query=%D0%B2%D0%BE%D0%B4%D0%B0%20%D0%B2%D0%B8%D0%B4%20%D1%81%D0%B2%D0%B5%D1%80%D1%85%D1%83&position=5&from_view=search&track=ais"
+                target="_blank">Изображение
                 от wirestock</a> на Freepik</div>
+        <div class="footer__text">Фото фона:<a href="https://krot.info/" target="_blank">Изображение
+                взято с сайта krot.info</a> </div>
     </footer>
     <!--'прелоадер'-->
     <section class="preloader preloader-visible" id="preloader">
