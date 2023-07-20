@@ -3,7 +3,7 @@
 @import '../param-nul-base-preload/preloader';
 //--------------------------------------
 :root {
-    --widthGex: 11vw;
+    --widthGex: 13vw;
     --heightGex: calc(var(--widthGex) * 1.066666666666667);
     --cirkleNum: calc(var(--widthGex) / 2.5);
 }
@@ -298,7 +298,7 @@
 
 @media screen and (orientation: landscape) {
      :root {
-        --widthGex: 11vh;
+        --widthGex: 12.5vh;
         --heightGex: calc(var(--widthGex) * 1.066666666666667);
         --cirkleNum: calc(var(--widthGex) / 2.7);
     }

@@ -138,7 +138,7 @@ button:disabled {
     transform: rotate(1turn); } }
 
 :root {
-  --widthGex: 14vw;
+  --widthGex: 17vw;
   --heightGex: calc(var(--widthGex) * 1.066666666666667);
   --cirkleNum: calc(var(--widthGex) / 2.5); }
 
@@ -303,7 +303,7 @@ button:disabled {
 
 @media screen and (orientation: landscape) {
   :root {
-    --widthGex: 14vh;
+    --widthGex: 17vh;
     --heightGex: calc(var(--widthGex) * 1.066666666666667);
     --cirkleNum: calc(var(--widthGex) / 2.7); }
   .map__gex-text {

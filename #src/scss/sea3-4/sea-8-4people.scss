@@ -3,7 +3,7 @@
 @import '../param-nul-base-preload/preloader';
 //--------------------------------------
 :root {
-    --widthGex: 13vw;
+    --widthGex: 12.5vw;
     --heightGex: calc(var(--widthGex) * 1.066666666666667);
     --cirkleNum: calc(var(--widthGex) / 2.5);
 }
@@ -16,8 +16,8 @@
     padding: 2vw;
     /**/
     display: grid;
-    grid-template-columns: repeat(12, calc(var(--widthGex) / 2));
-    grid-template-rows: repeat(9, calc(var(--heightGex) / 2.66 * 2)) calc( var(--heightGex) / 3);
+    grid-template-columns: repeat(14, calc(var(--widthGex) / 2));
+    grid-template-rows: repeat(7, calc(var(--heightGex) / 2.66 * 2)) calc( var(--heightGex) / 3);
     gap: 1px;
     &__gex-text {
         position: absolute;
@@ -93,183 +93,208 @@
 /*--1 остров-правый-*/
 
 .gex-1 {
-    grid-column-start: 7;
-    grid-row-start: 2;
+    grid-column-start: 9;
+    grid-row-start: 1;
 }
 
 .gex-2 {
-    grid-column-start: 6;
-    grid-row-start: 3;
+    grid-column-start: 8;
+    grid-row-start: 2;
 }
 
 .gex-3 {
-    grid-column-start: 8;
+    grid-column-start: 1;
     grid-row-start: 3;
 }
 
 .gex-4 {
-    grid-column-start: 5;
-    grid-row-start: 4;
+    grid-column-start: 3;
+    grid-row-start: 3;
 }
 
 .gex-5 {
-    grid-column-start: 7;
-    grid-row-start: 4;
+    grid-column-start: 5;
+    grid-row-start: 3;
 }
 
 .gex-6 {
-    grid-column-start: 9;
-    grid-row-start: 4;
+    grid-column-start: 7;
+    grid-row-start: 3;
 }
 
 .gex-7 {
-    grid-column-start: 4;
-    grid-row-start: 5;
+    grid-column-start: 9;
+    grid-row-start: 3;
 }
 
 .gex-8 {
-    grid-column-start: 6;
-    grid-row-start: 5;
+    grid-column-start: 11;
+    grid-row-start: 3;
 }
 
 .gex-9 {
-    grid-column-start: 8;
-    grid-row-start: 5;
+    grid-column-start: 2;
+    grid-row-start: 4;
 }
 
 .gex-10 {
-    grid-column-start: 1;
-    grid-row-start: 6;
+    grid-column-start: 4;
+    grid-row-start: 4;
 }
 
 .gex-11 {
-    grid-column-start: 3;
-    grid-row-start: 6;
+    grid-column-start: 6;
+    grid-row-start: 4;
 }
 
 .gex-12 {
-    grid-column-start: 5;
-    grid-row-start: 6;
+    grid-column-start: 8;
+    grid-row-start: 4;
 }
 
 .gex-13 {
-    grid-column-start: 7;
-    grid-row-start: 6;
+    grid-column-start: 10;
+    grid-row-start: 4;
 }
 
 .gex-14 {
-    grid-column-start: 2;
-    grid-row-start: 7;
+    grid-column-start: 1;
+    grid-row-start: 5;
 }
 
 .gex-15 {
-    grid-column-start: 4;
-    grid-row-start: 7;
+    grid-column-start: 3;
+    grid-row-start: 5;
 }
 
 .gex-16 {
-    grid-column-start: 6;
-    grid-row-start: 7;
+    grid-column-start: 9;
+    grid-row-start: 5;
 }
 
 .gex-17 {
-    grid-column-start: 5;
-    grid-row-start: 8;
+    grid-column-start: 4;
+    grid-row-start: 6;
+}
+
+.gex-18 {
+    grid-column-start: 8;
+    grid-row-start: 6;
+}
+
+.gex-19 {
+    grid-column-start: 10;
+    grid-row-start: 6;
+}
+
+.gex-20 {
+    grid-column-start: 3;
+    grid-row-start: 7;
+}
+
+.gex-21 {
+    grid-column-start: 7;
+    grid-row-start: 7;
+}
+
+.gex-22 {
+    grid-column-start: 9;
+    grid-row-start: 7;
 }
 
 
 /*------МОРЕ-------*/
 
 .gex-see-1 {
-    grid-column-start: 2;
-    grid-row-start: 5;
+    grid-column-start: 7;
+    grid-row-start: 1;
 }
 
 .gex-see-2 {
-    grid-column-start: 3;
-    grid-row-start: 8;
+    grid-column-start: 11;
+    grid-row-start: 1;
 }
 
 .gex-see-3 {
-    grid-column-start: 9;
+    grid-column-start: 2;
     grid-row-start: 2;
 }
 
 .gex-see-4 {
-    grid-column-start: 10;
-    grid-row-start: 3;
+    grid-column-start: 4;
+    grid-row-start: 2;
 }
 
 .gex-see-5 {
-    grid-column-start: 11;
-    grid-row-start: 4;
+    grid-column-start: 6;
+    grid-row-start: 2;
 }
 
 .gex-see-6 {
     grid-column-start: 10;
-    grid-row-start: 5;
+    grid-row-start: 2;
 }
 
 .gex-see-7 {
-    grid-column-start: 9;
-    grid-row-start: 6;
+    grid-column-start: 5;
+    grid-row-start: 5;
 }
 
 .gex-see-8 {
-    grid-column-start: 8;
-    grid-row-start: 7;
+    grid-column-start: 7;
+    grid-row-start: 5;
 }
 
 .gex-see-9 {
-    grid-column-start: 7;
-    grid-row-start: 8;
+    grid-column-start: 11;
+    grid-row-start: 5;
 }
 
 .gex-see-10 {
-    grid-column-start: 6;
-    grid-row-start: 1;
+    grid-column-start: 13;
+    grid-row-start: 5;
 }
 
 .gex-see-11 {
-    grid-column-start: 8;
-    grid-row-start: 1;
+    grid-column-start: 2;
+    grid-row-start: 6;
 }
 
 .gex-see-12 {
     grid-column-start: 6;
-    grid-row-start: 9;
+    grid-row-start: 6;
 }
 
 .gex-see-13 {
-    grid-column-start: 4;
-    grid-row-start: 9;
+    grid-column-start: 12;
+    grid-row-start: 6;
 }
 
 .gex-see-14 {
-    grid-column-start: 1;
-    grid-row-start: 8;
+    grid-column-start: 5;
+    grid-row-start: 7;
 }
 
 .gex-see-15 {
-    grid-column-start: 4;
-    grid-row-start: 1;
+    grid-column-start: 11;
+    grid-row-start: 7;
 }
 
 
 /*--ПУСТЫНЯ--*/
 
 .gex-90 {
-    grid-column-start: 5;
+    grid-column-start: 12;
     grid-row-start: 2;
 }
 
 .gex-91 {
-    grid-column-start: 4;
+    grid-column-start: 13;
     grid-row-start: 3;
 }
 
 .gex-92 {
-    grid-column-start: 3;
+    grid-column-start: 12;
     grid-row-start: 4;
 }
 
@@ -278,30 +303,20 @@
 
 .gex-100 {
     grid-column-start: 3;
-    grid-row-start: 2;
+    grid-row-start: 1;
 }
 
 .gex-101 {
-    grid-column-start: 2;
-    grid-row-start: 3;
-}
-
-.gex-102 {
-    grid-column-start: 1;
-    grid-row-start: 4;
+    grid-column-start: 5;
+    grid-row-start: 1;
 }
 
 
 /*-пол моря*/
 
 .gex-see-80 {
-    grid-column-start: 0;
-    grid-row-start: 7;
-}
-
-.gex-see-81 {
     grid-column-start: 1;
-    grid-row-start: 5;
+    grid-row-start: 4;
 }
 
 

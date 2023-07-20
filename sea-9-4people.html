@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!---------------'STYLE'---------------------->
+    <link rel="stylesheet" href="css/style-all-map.css">
+    <link rel="stylesheet" href="css/sea3-4/sea-9-4people.css">
+    <!---------------'FAVICON'---------------------->
+    <link type="image/x-icon" href="img/2.svg" rel="icon">
+    <!---------------------------------------------->
+    <title>Catan Map генератор</title>
+</head>
+
+<body class="lock" id="body">
+
+    <div class="btn-group">
+        <a class="btn" href="index.html">Вернуться к выбору</a>
+        <button class="btn " id="generateMapGex">Сгенерировать карту</button>
+        <button class="btn " disabled id="generateNumberGex">Сгенерировать цифры</button>
+        <div class="romaining-number-tokens" id="romainingNumberTokens">Без пустого острова</div>
+    </div>
+    <!--'НУЛЕВОЙ ГЕКС СРАВНЕНИЯ'-->
+    <div data-gex="0" id="gex0"></div>
+    <section class="map">
+
+
+        <!--'ОСНОВНОЙ остров'-->
+
+
+        <!--'ГЕКСЫ МОРЕ'-->
+        <div class="map__gex  block-no-name gex-1" data-gex="1" id="gex1">
+            <h2 class="map__gex-text" id="gexNumber1">1</h2>
+        </div>
+
+        <div class="map__gex  block-no-name gex-2" data-gex="7" id="gex2">
+            <h2 class="map__gex-text" id="gexNumber2">1</h2>
+        </div>
+
+        <div class="map__gex  block-no-name  gex-3" data-gex="2" id="gex3">
+            <h2 class="map__gex-text" id="gexNumber3">1</h2>
+        </div>
+
+        <div class="map__gex  block-no-name gex-4" data-gex="7" id="gex4">
+            <h2 class="map__gex-text" id="gexNumber4">1</h2>
+        </div>
+
+        <div class="map__gex  block-no-name  gex-5" data-gex="3" id="gex5">
+            <h2 class="map__gex-text" id="gexNumber5">1</h2>
+        </div>
+
+        <div class="map__gex  block-no-name gex-6" data-gex="7" id="gex6">
+            <h2 class="map__gex-text" id="gexNumber6">1</h2>
+        </div>
+
+        <div class="map__gex  block-no-name  gex-7" data-gex="4" id="gex7">
+            <h2 class="map__gex-text" id="gexNumber7">1</h2>
+        </div>
+
+        <div class="map__gex  block-no-name gex-8" data-gex="7" id="gex8">
+            <h2 class="map__gex-text" id="gexNumber8">1</h2>
+        </div>
+
+        <div class="map__gex  block-no-name  gex-9" data-gex="5" id="gex9">
+            <h2 class="map__gex-text" id="gexNumber9">1</h2>
+        </div>
+
+        <div class="map__gex  block-no-name gex-10" data-gex="7" id="gex10">
+            <h2 class="map__gex-text" id="gexNumber10">1</h2>
+        </div>
+
+        <div class="map__gex  block-no-name  gex-11" data-gex="1" id="gex11">
+            <h2 class="map__gex-text" id="gexNumber11">1</h2>
+        </div>
+
+        <div class="map__gex  block-no-name gex-12" data-gex="7" id="gex12">
+            <h2 class="map__gex-text" id="gexNumber12">1</h2>
+        </div>
+
+        <div class="map__gex  block-no-name  gex-13" data-gex="2" id="gex13">
+            <h2 class="map__gex-text" id="gexNumber13">1</h2>
+        </div>
+
+        <div class="map__gex  block-no-name gex-14" data-gex="7" id="gex14">
+            <h2 class="map__gex-text" id="gexNumber14">1</h2>
+        </div>
+
+        <div class="map__gex  block-no-name  gex-15" data-gex="3" id="gex15">
+            <h2 class="map__gex-text" id="gexNumber15">1</h2>
+        </div>
+
+        <div class="map__gex  block-no-name gex-16" data-gex="7" id="gex16">
+            <h2 class="map__gex-text" id="gexNumber16">1</h2>
+        </div>
+
+        <div class="map__gex  block-no-name  gex-17" data-gex="4" id="gex17">
+            <h2 class="map__gex-text" id="gexNumber17">1</h2>
+        </div>
+
+        <div class="map__gex  block-no-name gex-18" data-gex="7" id="gex18">
+            <h2 class="map__gex-text" id="gexNumber18">1</h2>
+        </div>
+
+        <div class="map__gex  block-no-name  gex-19" data-gex="5" id="gex19">
+            <h2 class="map__gex-text" id="gexNumber19">1</h2>
+        </div>
+
+        <div class="map__gex  block-no-name gex-20" data-gex="7" id="gex20">
+            <h2 class="map__gex-text" id="gexNumber20">1</h2>
+        </div>
+
+        <div class="map__gex  block-no-name  gex-21" data-gex="1" id="gex21">
+            <h2 class="map__gex-text" id="gexNumber21">1</h2>
+        </div>
+
+        <div class="map__gex  block-no-name gex-22" data-gex="7" id="gex22">
+            <h2 class="map__gex-text" id="gexNumber22">1</h2>
+        </div>
+
+        <div class="map__gex  block-no-name  gex-23" data-gex="2" id="gex23">
+            <h2 class="map__gex-text" id="gexNumber23">1</h2>
+        </div>
+
+        <div class="map__gex  block-no-name gex-24" data-gex="7" id="gex24">
+            <h2 class="map__gex-text" id="gexNumber24">1</h2>
+        </div>
+
+        <div class="map__gex  block-no-name  gex-25" data-gex="3" id="gex25">
+            <h2 class="map__gex-text" id="gexNumber25">1</h2>
+        </div>
+
+        <div class="map__gex  block-no-name gex-26" data-gex="7" id="gex26">
+            <h2 class="map__gex-text" id="gexNumber26">1</h2>
+        </div>
+
+        <div class="map__gex  block-no-name  gex-27" data-gex="4" id="gex27">
+            <h2 class="map__gex-text" id="gexNumber27">1</h2>
+        </div>
+
+        <div class="map__gex  block-no-name gex-28" data-gex="7" id="gex28">
+            <h2 class="map__gex-text" id="gexNumber28">1</h2>
+        </div>
+
+        <div class="map__gex  block-no-name  gex-29" data-gex="5" id="gex29">
+            <h2 class="map__gex-text" id="gexNumber29">1</h2>
+        </div>
+
+        <div class="map__gex  block-no-name gex-30" data-gex="7" id="gex30">
+            <h2 class="map__gex-text" id="gexNumber30">1</h2>
+        </div>
+
+        <div class="map__gex  block-no-name  gex-31" data-gex="1" id="gex31">
+            <h2 class="map__gex-text" id="gexNumber31">1</h2>
+        </div>
+
+        <div class="map__gex  block-no-name gex-32" data-gex="7" id="gex32">
+            <h2 class="map__gex-text" id="gexNumber32">1</h2>
+        </div>
+
+        <div class="map__gex  block-no-name  gex-33" data-gex="2" id="gex33">
+            <h2 class="map__gex-text" id="gexNumber33">1</h2>
+        </div>
+
+        <div class="map__gex  block-no-name gex-34" data-gex="7" id="gex34">
+            <h2 class="map__gex-text" id="gexNumber34">1</h2>
+        </div>
+
+        <div class="map__gex  block-no-name  gex-35" data-gex="3" id="gex35">
+            <h2 class="map__gex-text" id="gexNumber35">1</h2>
+        </div>
+
+        <div class="map__gex  block-no-name gex-36" data-gex="7" id="gex36">
+            <h2 class="map__gex-text" id="gexNumber36">1</h2>
+        </div>
+
+        <div class="map__gex  block-no-name  gex-37" data-gex="4" id="gex37">
+            <h2 class="map__gex-text" id="gexNumber37">1</h2>
+        </div>
+
+        <div class="map__gex  block-no-name gex-38" data-gex="7" id="gex38">
+            <h2 class="map__gex-text" id="gexNumber38">1</h2>
+        </div>
+
+        <div class="map__gex  block-no-name  gex-39" data-gex="5" id="gex39">
+            <h2 class="map__gex-text" id="gexNumber39">1</h2>
+        </div>
+
+        <div class="map__gex  block-no-name  gex-40" data-gex="1" id="gex40">
+            <h2 class="map__gex-text" id="gexNumber40">1</h2>
+        </div>
+
+        <div class="map__gex  block-no-name  gex-41" data-gex="2" id="gex41">
+            <h2 class="map__gex-text" id="gexNumber41">1</h2>
+        </div>
+
+        <div class="map__gex  block-no-name  gex-42" data-gex="3" id="gex42">
+            <h2 class="map__gex-text" id="gexNumber42">1</h2>
+        </div>
+
+        <!--'половинчатое море'-->
+        <div class="map__gex-see-mini gex-see-80"></div>
+        <div class="map__gex-see-mini gex-see-81"></div>
+
+
+
+    </section>
+
+    <!--'прелоадер'-->
+    <section class="preloader preloader-visible" id="preloader">
+        <h2 class="preloader__title">CATAN</h2>
+        <h2 class="preloader__subtitle">Генератор карты</h2>
+        <div class="preloader__text">Загрузка страницы</div>
+        <div class="preloader__loader"></div>
+    </section>
+    <!---------'SCRIPT'--------->
+    <!--'BASE'-->
+
+    <script src="js/all-base-function/num-gen.js"></script>
+    <!--'all'-->
+    <script src="js/preloader.js"></script>
+    <script src="js/sea/sea-2-4people/sea-9/sea-9-4people-map.js"></script>
+
+    <!--<script src="js/sea/sea-2-4people/sea-9/sea-9-4people-number-gex.js"></script>-->
+
+</body>
+
+</html>

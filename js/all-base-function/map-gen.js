@@ -32,6 +32,7 @@ let clayGexArray = []
     //массив с камнем
 let stoneGexArray = []
 
+
 //-----------раскрас гексов и сортировка----------
 const gexMapPicture = (allMapGexArray) => {
     allMapGexArray.forEach((element) => {
@@ -41,6 +42,7 @@ const gexMapPicture = (allMapGexArray) => {
         element.classList.remove('block3');
         element.classList.remove('block4');
         element.classList.remove('block5');
+
         if (datasetGexMap == 1) {
             element.classList.add('block1');
             treeGexArray.push(element)
@@ -61,6 +63,7 @@ const gexMapPicture = (allMapGexArray) => {
             element.classList.add('block5');
             stoneGexArray.push(element)
         }
+
     })
 }
 
