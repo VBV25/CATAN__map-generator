@@ -18,25 +18,24 @@
 
     <div class="btn-group">
         <a class="btn" href="index.html">Вернуться к выбору</a>
-        <button class="btn " id="generateMapGex">Сгенерировать карту</button>
-        <button class="btn " disabled id="generateNumberGex">Сгенерировать цифры</button>
-        <div class="romaining-number-tokens" id="romainingNumberTokens">Без пустого острова</div>
+
+        <button class="btn btn-gen" id="generateNumberGex">Сгенерировать цифры</button>
+        <button class="btn btn-full-gen" id="fullRandomNumGex">Рандом номеров</button>
+        <button class="btn full-width-btn" id="generateMapGex">Сгенерировать карту</button>
+        <div class="romaining-number-tokens" id="romainingNumberTokens"></div>
     </div>
     <!--'НУЛЕВОЙ ГЕКС СРАВНЕНИЯ'-->
     <div data-gex="0" id="gex0"></div>
     <section class="map">
 
-
         <!--'ОСНОВНОЙ остров'-->
 
-
-        <!--'ГЕКСЫ МОРЕ'-->
         <div class="map__gex  block-no-name gex-1" data-gex="1" id="gex1">
-            <h2 class="map__gex-text" id="gexNumber1">1</h2>
+            <h2 class="map__gex-text" id="gexNumber1">7</h2>
         </div>
 
         <div class="map__gex  block-no-name gex-2" data-gex="7" id="gex2">
-            <h2 class="map__gex-text" id="gexNumber2">1</h2>
+            <h2 class="map__gex-text" id="gexNumber2">100</h2>
         </div>
 
         <div class="map__gex  block-no-name  gex-3" data-gex="2" id="gex3">
@@ -215,14 +214,9 @@
         <div class="preloader__loader"></div>
     </section>
     <!---------'SCRIPT'--------->
-    <!--'BASE'-->
-
-    <script src="js/all-base-function/num-gen.js"></script>
-    <!--'all'-->
     <script src="js/preloader.js"></script>
     <script src="js/sea/sea-2-4people/sea-9/sea-9-4people-map.js"></script>
-
-    <!--<script src="js/sea/sea-2-4people/sea-9/sea-9-4people-number-gex.js"></script>-->
+    <script src="js/sea/sea-2-4people/sea-9/sea-9-4people-num.js"></script>
 
 </body>
 

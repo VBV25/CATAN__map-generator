@@ -18,6 +18,8 @@ const gexMapNumberArrRandomFn = () => {
 }
 
 //--------ОБЪЕКТЫ-для исключения повтора чисел на одном ресурсе------
+
+//обнуление жетонов
 const startResNum = (obj) => {
     for (let key in obj) {
         obj[key] = 0

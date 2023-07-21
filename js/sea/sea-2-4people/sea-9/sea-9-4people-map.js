@@ -91,6 +91,8 @@ const gex42 = document.getElementById('gex42');
     5 - камень (4шт)
 7 - море (19шт)
 -*/
+
+//массив с ресурсами
 const gexMapAtrNumberBase = [1, 7, 2, 7, 3, 7, 4, 7, 5, 7, 1, 7, 2, 7, 3, 7, 4, 7, 5, 7, 1, 7, 2, 7, 3, 7, 4, 7, 5, 7, 1, 7, 2, 7, 3, 7, 4, 7, 5, 1, 2, 3]
     //клон массива
 let gexMapAtrNumber = gexMapAtrNumberBase.slice(0)
@@ -157,10 +159,6 @@ const initialStateArrayGexRes = () => {
     clayGexArray = []
     stoneGexArray = []
 }
-
-
-//-------ПОЛНЫЙ РАНДОМ ГЕКСОВ---
-//let gexMapAtrNumberFullRandom
 
 //ФУНКЦИЯ ПЕРЕМЕШИВАНИЯ МАССИВА
 const arrayShuffle = (forArray) => {

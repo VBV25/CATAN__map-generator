@@ -204,7 +204,6 @@ body {
   row-gap: 8px; }
 
 .btn {
-  width: 42vw;
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
@@ -222,30 +221,22 @@ body {
   font-size: 2.8vw;
   font-weight: 800;
   text-align: center;
-  padding: 10px 3px;
+  padding: 8px 3px;
   border: 2px solid #be9143;
   background-color: #ffffff;
   color: #000000;
   cursor: pointer; }
 
-.full-random-map-gex {
-  width: 100%;
-  height: 5vw;
-  font-size: 2.8vw;
-  font-weight: 800;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 15px 4px;
-  border: 2px solid #be9143;
-  background-color: #cdec84;
-  color: #000000; }
+.btn-gen {
+  width: 42vw;
+  background-color: #83d683; }
+
+.btn-full-gen {
+  width: 42vw;
+  background-color: #fffd85; }
+
+.full-width-btn {
+  width: 100%; }
 
 .romaining-number-tokens {
   width: 100%;
@@ -263,13 +254,15 @@ body {
   align-items: center;
   padding: 8px 4px;
   border: 2px solid #be9143;
-  background-color: #ffffff;
+  background-color: #cccccc;
   color: #000000; }
 
 a.btn {
   width: 100% !important;
-  background-color: #cccccc !important;
-  margin-bottom: 10px; }
+  background-color: #9d92ff;
+  margin-bottom: 15px;
+  font-size: 3.5vw;
+  text-transform: uppercase; }
 
 .noNumber .map__gex-text {
   background-color: #f87070;

@@ -3,9 +3,9 @@
 @import '../param-nul-base-preload/preloader';
 //--------------------------------------
 :root {
-    --widthGex: 12.5vw;
+    --widthGex: 12.8vw;
     --heightGex: calc(var(--widthGex) * 1.066666666666667);
-    --cirkleNum: calc(var(--widthGex) / 2.5);
+    --cirkleNum: calc(var(--widthGex) / 2.3);
 }
 
 .map {
@@ -29,9 +29,9 @@
         border-radius: 50%;
         background-color: $greyBullet;
         color: $blackColor;
-        font-size: 2.6vw;
-        font-weight: bold;
-        border: 2px solid $btnBlueDarkColor;
+        font-size: 2.8vw;
+        font-weight: 800;
+        border: 1px solid $btnBlueDarkColor;
     }
     &__gex {
         position: relative;

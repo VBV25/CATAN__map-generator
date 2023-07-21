@@ -54,7 +54,6 @@ body {
 }
 
 .btn {
-    width: 42vw;
     height: max-content;
     display: flex;
     flex-wrap: wrap;
@@ -63,25 +62,25 @@ body {
     font-size: 2.8vw;
     font-weight: 800;
     text-align: center;
-    padding: 10px 3px;
+    padding: 8px 3px;
     border: 2px solid $goldColor;
     background-color: $whiteColor;
     color: $blackColor;
     cursor: pointer;
 }
 
-.full-random-map-gex {
+.btn-gen {
+    width: 42vw;
+    background-color: rgb(131, 214, 131);
+}
+
+.btn-full-gen {
+    width: 42vw;
+    background-color: rgb(255, 253, 133);
+}
+
+.full-width-btn {
     width: 100%;
-    height: 5vw;
-    font-size: 2.8vw;
-    font-weight: 800;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 15px 4px;
-    border: 2px solid $goldColor;
-    background-color: rgb(205, 236, 132);
-    color: $blackColor;
 }
 
 .romaining-number-tokens {
@@ -94,14 +93,16 @@ body {
     align-items: center;
     padding: 8px 4px;
     border: 2px solid $goldColor;
-    background-color: $whiteColor;
+    background-color: $smokeColor;
     color: $blackColor;
 }
 
 a.btn {
     width: 100% !important;
-    background-color: $smokeColor !important;
-    margin-bottom: 10px;
+    background-color: rgb(157, 146, 255);
+    margin-bottom: 15px;
+    font-size: 3.5vw;
+    text-transform: uppercase;
 }
 
 .noNumber .map__gex-text {
