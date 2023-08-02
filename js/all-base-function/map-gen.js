@@ -17,19 +17,25 @@ const shuffle = (array) => {
         }
     }
 }
+const allArrayShuffle = (arr) => {
+    for (let i = 0; i < 30; i++) {
+        shuffle(arr)
+    }
+    return arr
+}
 
 /*-----------НОВЫЕ МАССИВЫ СГЕНЕРИРОВАННОЙ КАРТЫ--------*/
 //---новый массив гексов сформированной карты---
 let newMapQuantityGexArray = []
-    //массив гексов с деревом
+//массив гексов с деревом
 let treeGexArray = []
-    //массив гексов ржи
+//массив гексов ржи
 let ryeGexArray = []
-    //массив гексов с баранами
+//массив гексов с баранами
 let ramsGexArray = []
-    //массив гексов с глиной
+//массив гексов с глиной
 let clayGexArray = []
-    //массив с камнем
+//массив с камнем
 let stoneGexArray = []
 
 
@@ -113,8 +119,6 @@ const arrayShuffle = () => {
     for (let i = 0; i < 30; i++) {
         shuffle(gexMapAtrNumberFullRandom)
     }
-    console.log(gexMapAtrNumberFullRandom);
-
     return gexMapAtrNumberFullRandom
 }
 

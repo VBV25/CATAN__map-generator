@@ -36,11 +36,12 @@ function gettingNewValuesGexNumber() {
 
 //---------ВСЕ РЕСУРСЫ КРОМЕ ГЛИНЫ-----
 //массив номерных жетонов общий
-const gexNumberBaseArray = [3, 4, 5, 6, 8, 9, 10, 11, 4, 5, 6, 8, 9, 10, 4, 5, 9];
+const gexNumberBaseArray = [3, 4, 5, 6, 8, 9, 10, 11, 4, 5, 6, 8, 9, 10];
 let gexNumberArray = gexNumberBaseArray.slice(0)
-
+const numArrAdditionalBase = [5, 9, 6, 8, 4, 10]
+let numArrAdditional = numArrAdditionalBase.slice(0)
 /*------------------КЛИК-ФУНКЦИЯ--------------------------*/
-generateNumberGexBtn.onclick = function() {
+generateNumberGexBtn.onclick = function () {
 
     //------ВОЗВРАТ БАЗОВЫХ НАСТРОЕК---
     startResNum(tree)
@@ -48,9 +49,9 @@ generateNumberGexBtn.onclick = function() {
     startResNum(rye)
     startResNum(clay)
     startResNum(stone)
-        //обнуление номерных жетонов
+    //обнуление номерных жетонов
     startNumberGexMap()
-        //общий массив с номерными жетонами--
+    //общий массив с номерными жетонами--
     gexNumberArray = gexNumberBaseArray.slice(0);
 
 
@@ -60,55 +61,55 @@ generateNumberGexBtn.onclick = function() {
     gettingNewValuesGexNumber()
     randomNumberCheckGex(gex4)
     delleteNumberFromArray(gex4)
-        //-----2----(8гекс)--
+    //-----2----(8гекс)--
     gettingNewValuesGexNumber()
     randomNumberCheckGex(gex8, gexNumber4)
     delleteNumberFromArray(gex8)
-        //-----3----(11гекс)--
+    //-----3----(11гекс)--
     gettingNewValuesGexNumber()
     randomNumberCheckGex(gex11, gexNumber4, gexNumber8)
     delleteNumberFromArray(gex11)
-        //-----4----(7гекс)--
+    //-----4----(7гекс)--
     gettingNewValuesGexNumber()
     randomNumberCheckGex(gex7, gexNumber4, gexNumber8, gexNumber11)
     delleteNumberFromArray(gex7)
-        //-----5----(3гекс)--
+    //-----5----(3гекс)--
     gettingNewValuesGexNumber()
     randomNumberCheckGex(gex3, gexNumber4, gexNumber7)
     delleteNumberFromArray(gex3)
-        //-----6----(5гекс)--
+    //-----6----(5гекс)--
     gettingNewValuesGexNumber()
     randomNumberCheckGex(gex5, gexNumber4, gexNumber8)
     delleteNumberFromArray(gex5)
-        //-----7----(10гекс)--
+    //-----7----(10гекс)--
     gettingNewValuesGexNumber()
     randomNumberCheckGex(gex10, gexNumber7, gexNumber11)
     delleteNumberFromArray(gex10)
-        //-----8--(12гекс)--
+    //-----8--(12гекс)--
     gettingNewValuesGexNumber()
     randomNumberCheckGex(gex12, gexNumber8, gexNumber11)
     delleteNumberFromArray(gex12)
-        //-----9--(1гекс)--
+    //-----9--(1гекс)--
     gettingNewValuesGexNumber()
     randomNumberCheckGex(gex1, gexNumber3, gexNumber4)
     delleteNumberFromArray(gex1)
-        //-----10--(2гекс)--
+    //-----10--(2гекс)--
     gettingNewValuesGexNumber()
     randomNumberCheckGex(gex2, gexNumber1, gexNumber4, gexNumber5)
     delleteNumberFromArray(gex2)
-        //-----11--(6гекс)--
+    //-----11--(6гекс)--
     gettingNewValuesGexNumber()
     randomNumberCheckGex(gex6, gexNumber3, gexNumber7, gexNumber10)
     delleteNumberFromArray(gex6)
-        //-----12--(9гекс)--
+    //-----12--(9гекс)--
     gettingNewValuesGexNumber()
     randomNumberCheckGex(gex9, gexNumber5, gexNumber8, gexNumber12)
     delleteNumberFromArray(gex9)
-        //-----13--(13гекс)--
+    //-----13--(13гекс)--
     gettingNewValuesGexNumber()
     randomNumberCheckGex(gex13, gexNumber10, gexNumber11)
     delleteNumberFromArray(gex13)
-        //-----14--(14гекс)--
+    //-----14--(14гекс)--
     gettingNewValuesGexNumber()
     randomNumberCheckGex(gex14, gexNumber11, gexNumber12, gexNumber13)
     delleteNumberFromArray(gex14)

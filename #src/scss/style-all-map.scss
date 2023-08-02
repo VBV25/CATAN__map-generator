@@ -1,6 +1,6 @@
-@import 'param-nul-base-preload/null-style';
-@import 'param-nul-base-preload/base';
-@import 'param-nul-base-preload/preloader';
+@import "param-nul-base-preload/null-style";
+@import "param-nul-base-preload/base";
+@import "param-nul-base-preload/preloader";
 //--------------------------------------
 html,
 body {
@@ -16,14 +16,14 @@ body {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    background-image: url('../img/ocean.jpg');
+    background-image: url("../img/ocean.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: center;
     font-family: $fontFamilyBase;
     padding: 10px;
     &:after {
-        content: '';
+        content: "";
         z-index: -1;
         position: absolute;
         top: 0;
@@ -119,29 +119,34 @@ a.btn {
 }
 
 .block1 {
-    background-image: url('../img/1.png');
+    background-image: url("../img/1.png");
 }
 
 .block2 {
-    background-image: url('../img/2.png');
+    background-image: url("../img/2.png");
 }
 
 .block3 {
-    background-image: url('../img/3.png');
+    background-image: url("../img/3.png");
 }
 
 .block4 {
-    background-image: url('../img/4.png');
+    background-image: url("../img/4.png");
 }
 
 .block5 {
-    background-image: url('../img/5.png');
+    background-image: url("../img/5.png");
 }
 
 .block7 {
-    background-image: url('../img/7.png');
+    background-image: url("../img/7.png");
 }
-
+.map__gex-desert {
+    background-image: url("../img/6.png");
+}
+.map__gex-x {
+    background-image: url("../img/9.png");
+}
 
 /*
 @media (max-width:900px) {
@@ -169,7 +174,7 @@ a.btn {
 
 @media screen and (orientation: landscape) {
     body {
-        background-image: url('../img/ocean2.jpg');
+        background-image: url("../img/ocean2.jpg");
         flex-direction: row;
     }
     .btn-group {

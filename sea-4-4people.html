@@ -15,39 +15,30 @@
 </head>
 
 <body class="lock" id="body">
-
     <div class="btn-group">
         <a class="btn" href="index.html">Вернуться к выбору</a>
-        <button class="btn " disabled id="generateMapGex">Сгенерировать карту</button>
-        <button class="btn " disabled id="generateNumberGex">Сгенерировать цифры</button>
-        <button class="full-random-map-gex" id="fullRandomMapGex">полный рандом гексов</button>
-        <div class="romaining-number-tokens" id="romainingNumberTokens">Без пустого острова</div>
+        <button class="btn btn-gen" id="generateMapGex">Сгенерировать карту</button>
+        <button class="btn btn-full-gen" id="fullRandomMapGex">Рандом гексов</button>
+        <button class="btn full-width-btn" id="generateNumberGex">Сгенерировать цифры</button>
+        <div class="romaining-number-tokens" id="romainingNumberTokens"></div>
     </div>
     <!--'НУЛЕВОЙ ГЕКС СРАВНЕНИЯ'-->
     <div data-gex="0" id="gex0"></div>
     <section class="map">
-
         <!--'пустыня-->
-        <div class="map__gex gex-90">
-            <img src="img/6.png" alt="">
+        <div class="map__gex-desert gex-90">
         </div>
-        <div class="map__gex gex-91">
-            <img src="img/6.png" alt="">
+        <div class="map__gex-desert gex-91">
         </div>
-        <div class="map__gex gex-92">
-            <img src="img/6.png" alt="">
+        <div class="map__gex-desert gex-92">
         </div>
         <!--'скрытые гексы'-->
-        <div class="map__gex gex-100">
-            <img src="img/9.png" alt="">
+        <div class="map__gex-x gex-100">
         </div>
-        <div class="map__gex gex-101">
-            <img src="img/9.png" alt="">
+        <div class="map__gex-x gex-101">
         </div>
-        <div class="map__gex gex-102">
-            <img src="img/9.png" alt="">
+        <div class="map__gex-x gex-102">
         </div>
-
         <!--'ОСНОВНОЙ остров'-->
         <div class="map__gex gex-1" data-gex="1" id="gex1">
             <h2 class="map__gex-text" id="gexNumber1">1</h2>
@@ -100,7 +91,6 @@
         <div class="map__gex gex-17" data-gex="1" id="gex17">
             <h2 class="map__gex-text" id="gexNumber17">1</h2>
         </div>
-
         <!--'ГЕКСЫ МОРЕ'-->
         <div class="map__gex-see gex-see-1"></div>
         <div class="map__gex-see gex-see-2"></div>
@@ -121,7 +111,6 @@
         <div class="map__gex-see-mini gex-see-80"></div>
         <div class="map__gex-see-mini gex-see-81"></div>
     </section>
-
     <!--'прелоадер'-->
     <section class="preloader preloader-visible" id="preloader">
         <h2 class="preloader__title">CATAN</h2>
@@ -135,9 +124,8 @@
     <script src="js/all-base-function/num-gen.js"></script>
     <!--'all'-->
     <script src="js/preloader.js"></script>
-    <script src="js/sea/sea-2-4people/sea-2-4people-map.js"></script>
-    <script src="js/sea/sea-2-4people/sea-2-4people-number-gex.js"></script>
-
+    <script src="js/sea/sea-4people/sea-4/sea-4-map.js"></script>
+    <script src="js/sea/sea-4people/sea-4/sea-4-number.js"></script>
 </body>
 
 </html>

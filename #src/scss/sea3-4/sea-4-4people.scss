@@ -1,6 +1,6 @@
-@import '../param-nul-base-preload/null-style';
-@import '../param-nul-base-preload/base';
-@import '../param-nul-base-preload/preloader';
+@import "../param-nul-base-preload/null-style";
+@import "../param-nul-base-preload/base";
+@import "../param-nul-base-preload/preloader";
 //--------------------------------------
 :root {
     --widthGex: 13vw;
@@ -17,7 +17,7 @@
     /**/
     display: grid;
     grid-template-columns: repeat(12, calc(var(--widthGex) / 2));
-    grid-template-rows: repeat(9, calc(var(--heightGex) / 2.66 * 2)) calc( var(--heightGex) / 3);
+    grid-template-rows: repeat(9, calc(var(--heightGex) / 2.66 * 2)) calc(var(--heightGex) / 3);
     gap: 1px;
     &__gex-text {
         position: absolute;
@@ -34,6 +34,8 @@
         border: 2px solid $btnBlueDarkColor;
     }
     &__gex,
+    &__gex-desert,
+    &__gex-x,
     &__gex-see,
     &__gex-see-mini {
         position: relative;
@@ -47,31 +49,31 @@
         background-position: center;
         &::before {
             position: absolute;
-            content: '';
+            content: "";
             z-index: -100 !important;
             top: -5%;
             left: -5%;
             width: 110%;
             height: 110%;
             opacity: 0.95;
-            background-image: url('../../img/2.svg');
+            background-image: url("../../img/2.svg");
             background-repeat: no-repeat;
             background-size: 100% 100%;
             background-position: center;
         }
     }
     &__gex-see {
-        background-image: url('../../img/7.png');
+        background-image: url("../../img/7.png");
         &::before {
             position: absolute;
-            content: '';
+            content: "";
             z-index: -100 !important;
             top: -5%;
             left: -5%;
             width: 110%;
             height: 110%;
             opacity: 0.95;
-            background-image: url('../../img/6.svg');
+            background-image: url("../../img/6.svg");
             background-repeat: no-repeat;
             background-size: 100% 100%;
             background-position: center;
@@ -79,16 +81,15 @@
     }
     &__gex-see-mini {
         background-size: 50% 100%;
-        background-image: url('../../img/8.png');
+        background-image: url("../../img/8.png");
         margin-left: -1px;
         background-position-x: left;
         &::before {
             left: -32%;
-            background-image: url('../../img/8-left.svg');
+            background-image: url("../../img/8-left.svg");
         }
     }
 }
-
 
 /*--1 остров-правый-*/
 
@@ -177,7 +178,6 @@
     grid-row-start: 8;
 }
 
-
 /*------МОРЕ-------*/
 
 .gex-see-1 {
@@ -255,7 +255,6 @@
     grid-row-start: 1;
 }
 
-
 /*--ПУСТЫНЯ--*/
 
 .gex-90 {
@@ -272,7 +271,6 @@
     grid-column-start: 3;
     grid-row-start: 4;
 }
-
 
 /*---СКРЫТЫЕ ГЕКСЫ---*/
 
@@ -291,7 +289,6 @@
     grid-row-start: 4;
 }
 
-
 /*-пол моря*/
 
 .gex-see-80 {
@@ -304,11 +301,10 @@
     grid-row-start: 5;
 }
 
-
 /*----------*/
 
 @media screen and (orientation: landscape) {
-     :root {
+    :root {
         --widthGex: 12vh;
         --heightGex: calc(var(--widthGex) * 1.066666666666667);
         --cirkleNum: calc(var(--widthGex) / 2.7);

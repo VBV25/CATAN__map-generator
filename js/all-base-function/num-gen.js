@@ -137,6 +137,7 @@ let numberGexForEach
 let numberIndexGexForEach
 const matchNumSearchCycle = () => {
     shuffle(gexNumberArray)
+    gexNumberArray.push(100)
     gexNumberArray.find((item, index) => {
         if (
             item != compTok1 &&
@@ -156,10 +157,18 @@ const matchNumSearchCycle = () => {
             return numberGexForEach
         }
     })
-}
+    if (numberGexForEach == 100) {
+        gexNumberArray.splice(numberIndexGexForEach, 1)
+    } else {
+        gexNumberArray.find((item, index) => {
+            if (item == 100) { gexNumberArray.splice(index, 1) }
+        })
+    }
 
+}
 //---функция проверки каждого ресурса---
-const resursCheckGexFn = function(generatedGex, comparisonToken1, comparisonToken2, comparisonToken3, comparisonToken4, comparisonToken5, comparisonToken6, resurceVariable = 0) {
+let spliceNewNumIndex
+const resursCheckGexFn = function (generatedGex, comparisonToken1, comparisonToken2, comparisonToken3, comparisonToken4, comparisonToken5, comparisonToken6, resurceVariable = 0) {
     compTok1 = comparisonToken1
     compTok2 = comparisonToken2
     compTok3 = comparisonToken3
@@ -191,9 +200,55 @@ const resursCheckGexFn = function(generatedGex, comparisonToken1, comparisonToke
     ) {
         //выполняем цикл подбора числа
         matchNumSearchCycle()
+
+        //если число все еще равно  
+        if (numberGexForEach == compTok1 ||
+            numberGexForEach == compTok2 ||
+            numberGexForEach == compTok3 ||
+            numberGexForEach == compTok4 ||
+            numberGexForEach == compTok5 ||
+            numberGexForEach == compTok6 ||
+            numberGexForEach == resVar1 ||
+            numberGexForEach == resVar2 ||
+            numberGexForEach == resVar3 ||
+            numberGexForEach == resVar4 ||
+            numberGexForEach == resVar5 ||
+            numberGexForEach == resVar6 ||
+            numberGexForEach == 100) {
+            //
+
+
+            numArrAdditional.find((item, index) => {
+                if (
+                    item != compTok1 &&
+                    item != compTok2 &&
+                    item != compTok3 &&
+                    item != compTok4 &&
+                    item != compTok5 &&
+                    item != compTok6 &&
+                    item != resVar1 &&
+                    item != resVar2 &&
+                    item != resVar3 &&
+                    item != resVar4 &&
+                    item != resVar5 &&
+                    item != resVar6 &&
+                    item != 100) {
+                    numberGexForEach = item
+                    numberIndexGexForEach = index
+                    spliceNewNumIndex = Number(numberIndexGexForEach - 1)
+                    return numberGexForEach
+                }
+            })
             //записываем число в жетон
-        generatedGex.children[0].textContent = numberGexForEach;
-        tokenValueNew = numberGexForEach
+            generatedGex.children[0].textContent = numberGexForEach;
+            tokenValueNew = numberGexForEach
+            //добавляем это число в основной массив и удаляем из резервного
+            gexNumberArray.splice(spliceNewNumIndex, 0, numberGexForEach)
+            numArrAdditional.splice(numberIndexGexForEach, 1)
+        } else {//записываем число в жетон
+            generatedGex.children[0].textContent = numberGexForEach;
+            tokenValueNew = numberGexForEach
+        }
     } else {
         //записываем число в жетон
         generatedGex.children[0].textContent = propertyRandomAllNumberGex;
@@ -204,9 +259,9 @@ const resursCheckGexFn = function(generatedGex, comparisonToken1, comparisonToke
 
 
 //------ОСНОВНАЯ ФУНКЦИЯ РАНДОМНОЙ ГЕНЕРАЦИИ ЧИСЛА-----
-const randomNumberCheckGex = function(generatedGex, comparisonToken1 = 1, comparisonToken2 = 1, comparisonToken3 = 1, comparisonToken4 = 1, comparisonToken5 = 1, comparisonToken6 = 1) {
+const randomNumberCheckGex = function (generatedGex, comparisonToken1 = 1, comparisonToken2 = 1, comparisonToken3 = 1, comparisonToken4 = 1, comparisonToken5 = 1, comparisonToken6 = 1) {
     shuffle(gexNumberArray)
-        //--дерево--
+    //--дерево--
     if (generatedGex.classList.contains('block1')) {
         resursCheckGexFn(generatedGex, comparisonToken1, comparisonToken2, comparisonToken3, comparisonToken4, comparisonToken5, comparisonToken6, tree)
         checkNum11and3(tree, tokenValueNew)

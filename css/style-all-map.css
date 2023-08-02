@@ -166,7 +166,7 @@ body {
   font-family: "Open Sans", sans-serif;
   padding: 10px; }
   body:after {
-    content: '';
+    content: "";
     z-index: -1;
     position: absolute;
     top: 0;
@@ -292,6 +292,12 @@ a.btn {
 
 .block7 {
   background-image: url("../img/7.png"); }
+
+.map__gex-desert {
+  background-image: url("../img/6.png"); }
+
+.map__gex-x {
+  background-image: url("../img/9.png"); }
 
 /*
 @media (max-width:900px) {

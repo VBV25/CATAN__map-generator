@@ -157,8 +157,8 @@ button:disabled {
   display: grid;
   -ms-grid-columns: (calc(var(--widthGex) / 2))[12];
   grid-template-columns: repeat(12, calc(var(--widthGex) / 2));
-  -ms-grid-rows: (calc(var(--heightGex) / 2.66 * 2))[9] calc( var(--heightGex) / 3);
-  grid-template-rows: repeat(9, calc(var(--heightGex) / 2.66 * 2)) calc( var(--heightGex) / 3);
+  -ms-grid-rows: (calc(var(--heightGex) / 2.66 * 2))[9] calc(var(--heightGex) / 3);
+  grid-template-rows: repeat(9, calc(var(--heightGex) / 2.66 * 2)) calc(var(--heightGex) / 3);
   gap: 1px; }
   .map__gex-text {
     position: absolute;
@@ -179,7 +179,7 @@ button:disabled {
     font-size: 2.6vw;
     font-weight: bold;
     border: 2px solid #08215d; }
-  .map__gex, .map__gex-see, .map__gex-see-mini {
+  .map__gex, .map__gex-desert, .map__gex-x, .map__gex-see, .map__gex-see-mini {
     position: relative;
     width: var(--widthGex);
     height: var(--heightGex);
@@ -195,9 +195,9 @@ button:disabled {
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: center; }
-    .map__gex::before, .map__gex-see::before, .map__gex-see-mini::before {
+    .map__gex::before, .map__gex-desert::before, .map__gex-x::before, .map__gex-see::before, .map__gex-see-mini::before {
       position: absolute;
-      content: '';
+      content: "";
       z-index: -100 !important;
       top: -5%;
       left: -5%;
@@ -212,7 +212,7 @@ button:disabled {
     background-image: url("../../img/7.png"); }
     .map__gex-see::before {
       position: absolute;
-      content: '';
+      content: "";
       z-index: -100 !important;
       top: -5%;
       left: -5%;
