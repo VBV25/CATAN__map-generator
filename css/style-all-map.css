@@ -176,6 +176,16 @@ body {
     background-color: #000000;
     opacity: 0.4; }
 
+.hidden {
+  overflow: hidden; }
+
+.popup-active {
+  top: 0 !important;
+  opacity: 1 !important;
+  -webkit-transition: all 0.7s ease 0s;
+  -o-transition: all 0.7s ease 0s;
+  transition: all 0.7s ease 0s; }
+
 .map {
   position: relative;
   z-index: 10;
@@ -238,6 +248,8 @@ body {
   transition: all 0.3s; }
   .btn:active {
     top: 3px;
+    -webkit-transform: rotateX(20deg);
+    transform: rotateX(20deg);
     -webkit-box-shadow: 0 0px 0px #acacac;
     box-shadow: 0 0px 0px #acacac;
     -webkit-transition: all 0.3s;
@@ -368,7 +380,87 @@ body {
 .map__gex-x {
   background-image: url("../img/9.png"); }
 
-@media (max-width: 500px) {
+.rules {
+  z-index: 150;
+  position: absolute;
+  top: -200%;
+  left: 0;
+  width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  min-height: 100%;
+  padding: 20px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.9);
+  opacity: 0;
+  -webkit-transition: all 0.7s ease 0s;
+  -o-transition: all 0.7s ease 0s;
+  transition: all 0.7s ease 0s;
+  overflow-y: scroll; }
+  .rules__container {
+    position: relative;
+    width: 90%;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    min-height: 80vh;
+    padding: 80px 20px;
+    background-color: #cccccc; }
+  .rules__btn-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 5px 15px;
+    font-size: 2vw;
+    font-weight: 800;
+    border: 2px solid black; }
+  .rules__title {
+    width: 100%;
+    text-align: center;
+    font-size: 2.8vw;
+    font-weight: 800;
+    margin-bottom: 30px; }
+  .rules__img-map {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 70%;
+    height: auto;
+    margin: 0px auto 30px; }
+  .rules__subtitle {
+    width: 50%;
+    font-size: 2.6vw;
+    font-weight: 700;
+    padding: 5px 100px 5px 50px;
+    margin-bottom: 10px;
+    background-color: #39486c;
+    color: #ffffff; }
+  .rules__text {
+    font-size: 2.4vw;
+    font-weight: 500;
+    margin-bottom: 10px; }
+
+.map__gex img {
+  width: var(--widthGex);
+  height: var(--heightGex); }
+
+#gex0 {
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  z-index: -1500;
+  opacity: 0; }
+
+@media (max-width: 650px) {
   .btn {
     -webkit-box-shadow: 0 3px 0px #3f3f3f, 0 0 5px 2px rgba(0, 0, 0, 0.572) inset;
     box-shadow: 0 3px 0px #3f3f3f, 0 0 5px 2px rgba(0, 0, 0, 0.572) inset; }
@@ -377,10 +469,32 @@ body {
       -webkit-transform: rotateX(40deg);
       transform: rotateX(40deg);
       -webkit-box-shadow: 0 0px 0px #acacac;
-      box-shadow: 0 0px 0px #acacac; } }
+      box-shadow: 0 0px 0px #acacac; }
+  .rules__container {
+    padding: 60px 20px; }
+  .rules__btn-close {
+    top: 20px;
+    padding: 5px 15px;
+    font-size: 3.6vw; }
+  .rules__title {
+    font-size: 4.8vw;
+    font-weight: 800;
+    margin-bottom: 15px; }
+  .rules__img-map {
+    width: 100%;
+    margin: 0px auto 15px; }
+  .rules__subtitle {
+    width: 100%;
+    font-size: 4vw;
+    padding: 5px 120px 5px 30px;
+    margin-bottom: 10px; }
+  .rules__text {
+    font-size: 3.8vw;
+    margin-bottom: 20px; } }
 
 @media screen and (orientation: landscape) {
   body {
+    padding: 0;
     background-image: url("../img/ocean2.jpg");
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -425,8 +539,11 @@ body {
     padding: 3px;
     margin-top: 3vh; }
   .romaining-number-tokens {
-    width: 24vw;
-    height: 14vh;
+    position: absolute;
+    width: 70%;
+    left: 15%;
+    bottom: 1%;
+    height: 8vh;
     font-size: 2.4vw;
     padding: 5px;
     margin-top: 3vh; }
@@ -440,14 +557,3 @@ body {
     font-size: 2.3vw; }
   .popular-number .map__gex-text {
     font-size: 1.8vw; } }
-
-.map__gex img {
-  width: var(--widthGex);
-  height: var(--heightGex); }
-
-#gex0 {
-  width: 0px;
-  height: 0px;
-  position: absolute;
-  z-index: -1500;
-  opacity: 0; }

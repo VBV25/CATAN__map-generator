@@ -18,22 +18,24 @@ const gex15 = document.getElementById('gex15');
 const gex16 = document.getElementById('gex16');
 const gex17 = document.getElementById('gex17');
 const gex18 = document.getElementById('gex18');
+const gex19 = document.getElementById('gex19');
+const gex20 = document.getElementById('gex20');
 
 
 //КОЛЛИЧЕСТВО ВОЗМОЖНЫХ ГЕКСОВ КОНКРЕТНЫХ РЕСУРСОВ
 /*-значения:
     1 - дерево(4шт)
     2 - бараны (4шт)
-    3 - рожь (4шт)
+    3 - рожь (5шт)
     4 - глина(3шт)
-    5 - камень (3шт)
+    5 - камень (4шт)
 -*/
-const gexMapAtrNumberBase = [1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3]
+const gexMapAtrNumberBase = [1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 5, 3]
 //клон массива
 let gexMapAtrNumber = gexMapAtrNumberBase.slice(0)
 
 //доп гексы
-const mapGexArrAdditionalBase = [5, 4, 2, 3, 1]
+const mapGexArrAdditionalBase = [2, 4, 1, 5, 3]
 let mapGexArrAdditional = mapGexArrAdditionalBase.slice(0)
 
 //-----------раскрас гексов и сортировка----------
@@ -44,25 +46,32 @@ gexMapPicture(allMapGex);
 const generateMap = () => {
     //-----Поочередное создание карты из ресурсов----
 
-    mapGenerationGex(gex8)
-    mapGenerationGex(gex9, gex8)
-    mapGenerationGex(gex10, gex9)
-    mapGenerationGex(gex11, gex10)
-    mapGenerationGex(gex7, gex8)
+    mapGenerationGex(gex1)
+    mapGenerationGex(gex6, gex1)
+    mapGenerationGex(gex7, gex1, gex6)
+    mapGenerationGex(gex2, gex1, gex7)
 
-    mapGenerationGex(gex2, gex7, gex8)
-    mapGenerationGex(gex3, gex2, gex8, gex9)
-    mapGenerationGex(gex4, gex3, gex9, gex10)
-    mapGenerationGex(gex5, gex4, gex10, gex11)
-    mapGenerationGex(gex14, gex7, gex8)
-    mapGenerationGex(gex15, gex8, gex9, gex14)
-    mapGenerationGex(gex16, gex9, gex10, gex15)
-    mapGenerationGex(gex17, gex10, gex11, gex16)
-    mapGenerationGex(gex6, gex5, gex11)
-    mapGenerationGex(gex18, gex11, gex17)
-    mapGenerationGex(gex12, gex6, gex11, gex18)
-    mapGenerationGex(gex1, gex2, gex7)
-    mapGenerationGex(gex13, gex7, gex14)
+    mapGenerationGex(gex5)
+    mapGenerationGex(gex8, gex5)
+
+    mapGenerationGex(gex20)
+    mapGenerationGex(gex14, gex20)
+    mapGenerationGex(gex19, gex14, gex20)
+    mapGenerationGex(gex15, gex14, gex20)
+
+    mapGenerationGex(gex13)
+    mapGenerationGex(gex16, gex13)
+
+    mapGenerationGex(gex4, gex8, gex5)
+    mapGenerationGex(gex3, gex2, gex4)
+    mapGenerationGex(gex9, gex5, gex8)
+
+    mapGenerationGex(gex17, gex16, gex13)
+    mapGenerationGex(gex18, gex17, gex19)
+    mapGenerationGex(gex12, gex13, gex16)
+
+    mapGenerationGex(gex10, gex6)
+    mapGenerationGex(gex11, gex15)
 
     //---Смена изображений в соответствии со значением атрибута----
     gexMapPicture(allMapGex)
@@ -85,10 +94,11 @@ generateMapGexButton.onclick = function () {
 
     //----ЕСЛИ РЕСУРСОВ БОЛЬШЕ ЧЕМ НУЖНО
     while (treeGexArray.length != 4 ||
-        ryeGexArray.length != 4 ||
+        ryeGexArray.length != 5 ||
         ramsGexArray.length != 4 ||
         clayGexArray.length >= 4 || clayGexArray.length < 3 ||
-        stoneGexArray.length > 4 || stoneGexArray.length < 3
+        stoneGexArray.length > 5 || stoneGexArray.length < 4
+
     ) {
         romainingNumberTokens.textContent = ''
         initialStateArrayGexRes()

@@ -16,12 +16,14 @@
 
 <body class="lock" id="body">
 
+    <!--'КНОПКИ'-->
     <div class="btn-group">
-        <a class="btn" href="index.html">Вернуться к выбору</a>
-        <button class="btn " disabled id="generateMapGex">Сгенерировать карту</button>
-        <button class="btn " disabled id="generateNumberGex">Сгенерировать цифры</button>
-        <button class="full-random-map-gex" id="fullRandomMapGex">полный рандом гексов</button>
-        <div class="romaining-number-tokens" id="romainingNumberTokens">Без пустого острова</div>
+        <a class="btn btn-back" href="index.html">Назад</a>
+        <button class="btn btn-gen" id="generateMapGex">Карта</button>
+        <button class="btn btn-gen" id="generateNumberGex">Цифры</button>
+        <button class="btn btn-full-gen" id="fullRandomMapGex">Рандом <br> гексов</button>
+        <button class="btn btn-full-gen" id="fullRandomNumGex">Рандом<br> номеров</button>
+        <button class="btn btn-rules" id="btnRules">Правила</button>
     </div>
     <!--'НУЛЕВОЙ ГЕКС СРАВНЕНИЯ'-->
     <div data-gex="0" id="gex0"></div>
@@ -79,9 +81,21 @@
         <div class="map__gex gex-17" data-gex="4" id="gex17">
             <h2 class="map__gex-text" id="gexNumber17">1</h2>
         </div>
-
     </section>
-
+    <!--'ПОПАП ПРАВИЛА'-->
+    <section class="rules" id="rulesPopup">
+        <div class="rules__container"> <button class="rules__btn-close" id="rulesBtnClose">Закрыть</button>
+            <h2 class="rules__title">ПРАВИЛА(мореходы)</h2>
+            <img class="rules__img-map" src="img/rules-img-map/sea-7---4people.jpg" alt="Карта из правил">
+            <h3 class="rules__subtitle">Подготовка</h3>
+            <p class="rules__text">текст текст текст текст текст текст текст текст текст текст текст текст текст текст
+                текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст</p>
+            <h3 class="rules__subtitle">Доп. правила</h3>
+            <p class="rules__text"> текст текст текст текст текст текст текст текст текст текст текст текст текст текст
+                текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст
+                текст текст текст текст текст текст текст текст </p>
+        </div>
+    </section>
     <!--'прелоадер'-->
     <section class="preloader preloader-visible" id="preloader">
         <h2 class="preloader__title">CATAN</h2>
@@ -95,8 +109,8 @@
     <script src="js/all-base-function/num-gen.js"></script>
     <!--'all'-->
     <script src="js/preloader.js"></script>
-    <script src="js/sea/sea-2-4people/sea-2-4people-map.js"></script>
-    <script src="js/sea/sea-2-4people/sea-2-4people-number-gex.js"></script>
+    <script src="js/sea/sea-4people/sea-7/sea-7-map.js"></script>
+    <script src="js/sea/sea-4people/sea-7/sea-7-number.js"></script>
 
 </body>
 

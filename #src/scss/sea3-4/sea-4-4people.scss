@@ -305,11 +305,12 @@
 
 @media screen and (orientation: landscape) {
     :root {
-        --widthGex: 12vh;
+        --widthGex: 10.5vh;
         --heightGex: calc(var(--widthGex) * 1.066666666666667);
         --cirkleNum: calc(var(--widthGex) / 2.7);
     }
     .map {
+        padding: 5px;
         &__gex-text {
             font-size: 1.6vw;
         }

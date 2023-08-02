@@ -34,7 +34,14 @@ body {
         opacity: 0.4;
     }
 }
-
+.hidden {
+    overflow: hidden;
+}
+.popup-active {
+    top: 0 !important;
+    opacity: 1 !important;
+    transition: all 0.7s ease 0s;
+}
 .map {
     position: relative;
     z-index: 10;
@@ -75,9 +82,11 @@ body {
     cursor: pointer;
     //
     box-shadow: 0 5px 0px rgb(172, 172, 172), 0 0 15px 2px black;
+
     transition: all 0.3s;
     &:active {
         top: 3px;
+        transform: rotateX(20deg);
         box-shadow: 0 0px 0px rgb(172, 172, 172);
         transition: all 0.3s;
     }
@@ -192,7 +201,91 @@ body {
     background-image: url("../img/9.png");
 }
 
-@media (max-width: 500px) {
+//---ПОПАП ПРАВИЛА---
+.rules {
+    z-index: 150;
+    position: absolute;
+    top: -200%;
+    left: 0;
+    width: 100%;
+    height: max-content;
+    min-height: 100%;
+    padding: 20px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $blackColorOpacity;
+    opacity: 0;
+    transition: all 0.7s ease 0s;
+    overflow-y: scroll;
+
+    &__container {
+        position: relative;
+        width: 90%;
+        height: max-content;
+        min-height: 80vh;
+        padding: 80px 20px;
+        background-color: $smokeColor;
+    }
+    &__btn-close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        padding: 5px 15px;
+        font-size: 2vw;
+        font-weight: 800;
+        border: 2px solid black;
+    }
+    &__title {
+        width: 100%;
+        text-align: center;
+        font-size: 2.8vw;
+        font-weight: 800;
+        margin-bottom: 30px;
+    }
+    &__img-map {
+        display: flex;
+
+        width: 70%;
+        height: auto;
+        margin: 0px auto 30px;
+    }
+    &__subtitle {
+        width: 50%;
+        font-size: 2.6vw;
+        font-weight: 700;
+        padding: 5px 100px 5px 50px;
+        margin-bottom: 10px;
+        background-color: $btnBlueColor;
+        color: $whiteColor;
+    }
+    &__text {
+        font-size: 2.4vw;
+        font-weight: 500;
+
+        margin-bottom: 10px;
+    }
+}
+
+//------------------------
+.map {
+    &__gex {
+        img {
+            width: var(--widthGex);
+            height: var(--heightGex);
+        }
+    }
+}
+
+#gex0 {
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    z-index: -1500;
+    opacity: 0;
+}
+//-------------------------------------
+@media (max-width: 650px) {
     .btn {
         box-shadow: 0 3px 0px rgb(63, 63, 63), 0 0 5px 2px rgba(0, 0, 0, 0.572) inset;
 
@@ -202,10 +295,44 @@ body {
             box-shadow: 0 0px 0px rgb(172, 172, 172);
         }
     }
+
+    .rules {
+        &__container {
+            padding: 60px 20px;
+        }
+        &__btn-close {
+            top: 20px;
+
+            padding: 5px 15px;
+            font-size: 3.6vw;
+        }
+        &__title {
+            font-size: 4.8vw;
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+        &__img-map {
+            width: 100%;
+            margin: 0px auto 15px;
+        }
+        &__subtitle {
+            width: 100%;
+            font-size: 4vw;
+
+            padding: 5px 120px 5px 30px;
+            margin-bottom: 10px;
+        }
+        &__text {
+            font-size: 3.8vw;
+
+            margin-bottom: 20px;
+        }
+    }
 }
 
 @media screen and (orientation: landscape) {
     body {
+        padding: 0;
         background-image: url("../img/ocean2.jpg");
         flex-direction: row;
     }
@@ -235,8 +362,11 @@ body {
         margin-top: 3vh;
     }
     .romaining-number-tokens {
-        width: 24vw;
-        height: 14vh;
+        position: absolute;
+        width: 70%;
+        left: 15%;
+        bottom: 1%;
+        height: 8vh;
         font-size: 2.4vw;
         padding: 5px;
         margin-top: 3vh;
@@ -252,21 +382,4 @@ body {
     .popular-number .map__gex-text {
         font-size: 1.8vw;
     }
-}
-
-.map {
-    &__gex {
-        img {
-            width: var(--widthGex);
-            height: var(--heightGex);
-        }
-    }
-}
-
-#gex0 {
-    width: 0px;
-    height: 0px;
-    position: absolute;
-    z-index: -1500;
-    opacity: 0;
 }

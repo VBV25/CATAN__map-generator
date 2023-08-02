@@ -608,3 +608,19 @@ fullRandomNumGex.onclick = () => {
     //выделяем 6 и 8 
     populaNumberGex();
 }
+
+
+/*------------------*/
+//------ПОПАП С ПРАВИЛАМИ-----
+const rulesBtnClose = document.getElementById('rulesBtnClose');
+const rulesBtn = document.getElementById('btnRules');
+const rulesPopup = document.getElementById('rulesPopup');
+
+rulesBtn.onclick = () => {
+    rulesPopup.classList.add('popup-active')
+    body.classList.add('hiden')
+}
+rulesBtnClose.onclick = () => {
+    rulesPopup.classList.remove('popup-active')
+    body.classList.remove('hiden')
+}
