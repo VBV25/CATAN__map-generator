@@ -162,11 +162,3 @@ fullRandomNumGexAllMap.onclick = function () {
 }
 
 
-const btn = document.getElementsByClassName('btn');
-let btnArr = Array.from(btn)
-console.log(btnArr);
-btnArr.forEach((el) => {
-    el.onclick = () => {
-        console.log('111');
-    }
-})
