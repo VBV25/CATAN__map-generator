@@ -255,7 +255,7 @@ const matchNumSearchCycle = () => {
 }
 
 //---функция проверки каждого ресурса---
-const resursCheckGexFn = function(generatedGex, comparisonToken1, comparisonToken2, comparisonToken3, comparisonToken4, comparisonToken5, comparisonToken6, resurceVariable = 0) {
+const resursCheckGexFn = function (generatedGex, comparisonToken1, comparisonToken2, comparisonToken3, comparisonToken4, comparisonToken5, comparisonToken6, resurceVariable = 0) {
     compTok1 = comparisonToken1
     compTok2 = comparisonToken2
     compTok3 = comparisonToken3
@@ -287,7 +287,7 @@ const resursCheckGexFn = function(generatedGex, comparisonToken1, comparisonToke
     ) {
         //выполняем цикл подбора числа
         matchNumSearchCycle()
-            //записываем число в жетон
+        //записываем число в жетон
         generatedGex.children[0].textContent = numberGexForEach;
         tokenValueNew = numberGexForEach
     } else {
@@ -300,10 +300,10 @@ const resursCheckGexFn = function(generatedGex, comparisonToken1, comparisonToke
 
 
 //------ОСНОВНАЯ ФУНКЦИЯ РАНДОМНОЙ ГЕНЕРАЦИИ ЧИСЛА-----
-const randomNumberCheckGex = function(generatedGex, comparisonToken1 = 1, comparisonToken2 = 1, comparisonToken3 = 1, comparisonToken4 = 1, comparisonToken5 = 1, comparisonToken6 = 1) {
+const randomNumberCheckGex = function (generatedGex, comparisonToken1 = 1, comparisonToken2 = 1, comparisonToken3 = 1, comparisonToken4 = 1, comparisonToken5 = 1, comparisonToken6 = 1) {
     if (generatedGex.dataset.gex != 7) {
         arrayShuffle(gexNumberArray)
-            //--дерево--
+        //--дерево--
         if (generatedGex.classList.contains('block1')) {
             resursCheckGexFn(generatedGex, comparisonToken1, comparisonToken2, comparisonToken3, comparisonToken4, comparisonToken5, comparisonToken6, tree)
             checkNum11and3(tree, tokenValueNew)
@@ -371,17 +371,17 @@ const populaNumberGex = () => {
 
 
 /*------------------КЛИК-ФУНКЦИЯ--------------------------*/
-generateNumberGexBtn.onclick = function() {
-
+generateNumberGexBtn.onclick = function () {
+    romainingNumberTokens.textContent = ''
     //------ВОЗВРАТ БАЗОВЫХ НАСТРОЕК---
     startResNum(tree)
     startResNum(rams)
     startResNum(rye)
     startResNum(clay)
     startResNum(stone)
-        //обнуление номерных жетонов
+    //обнуление номерных жетонов
     startNumberGexMap()
-        //общий массив с номерными жетонами--
+    //общий массив с номерными жетонами--
     gexNumberArray = gexNumberBaseArray.slice(0);
 
 
@@ -586,33 +586,23 @@ const gexMapFullNumberArrRandomFn = () => {
 }
 
 fullRandomNumGex.onclick = () => {
+    romainingNumberTokens.textContent = ''
     //обнуление номерных жетонов
     startNumberGexMap()
-
     //общий массив с номерными жетонами--
     fullRandomNumberGexArr = gexNumberBaseArray.slice(0)
-
     allMapGex.forEach((el) => {
         if (el.dataset.gex != 7) {
-
             //перемешиваем массив
             arrayShuffle(fullRandomNumberGexArr)
-
             //получаем рандомное число
             gexMapFullNumberArrRandomFn()
-
-
             //присваиваем число жетону гекса
-            console.log(propertyRandomAllNumberGex);
             el.children[0].textContent = propertyFullRandomAllNumberGex
-
             //удаляем число из массива
             fullRandomNumberGexArr.splice(propertyFullRandomAllNumberGexIndex, 1)
 
-            console.log(fullRandomNumberGexArr);
-
         }
-
     })
 
     //выделяем 6 и 8 

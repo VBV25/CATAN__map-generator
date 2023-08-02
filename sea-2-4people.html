@@ -15,17 +15,21 @@
 </head>
 
 <body class="lock" id="body">
+
+    <!--'КНОПКИ'-->
     <div class="btn-group">
-        <a class="btn" href="index.html">Вернуться к выбору</a>
-        <button class="btn btn-gen" id="generateMapGex">Сгенерировать карту</button>
-        <button class="btn btn-full-gen" id="fullRandomMapGex">Рандом гексов</button>
-        <button class="btn full-width-btn" id="generateNumberGex">Сгенерировать цифры</button>
-        <div class="romaining-number-tokens" id="romainingNumberTokens"></div>
+        <a class="btn btn-back" href="index.html">Назад</a>
+
+        <button class="btn btn-gen" id="generateMapGex">Карта</button>
+        <button class="btn btn-gen" id="generateNumberGex">Цифры</button>
+        <button class="btn btn-full-gen" id="fullRandomMapGex">Рандом <br> гексов</button>
+        <button class="btn btn-full-gen" id="fullRandomNumGex">Рандом<br> номеров</button>
+        <button class="btn btn-rules">Правила</button>
     </div>
     <!--'НУЛЕВОЙ ГЕКС СРАВНЕНИЯ'-->
     <div data-gex="0" id="gex0"></div>
-    <section class="map">
 
+    <section class="map">
         <!--'1 остров-мини'-->
         <div class="map__gex gex-1" data-gex="2" id="gex1">
             <h2 class="map__gex-text" id="gexNumber1">1</h2>
@@ -116,6 +120,9 @@
         <div class="map__gex-see-mini gex-see-80"></div>
         <div class="map__gex-see-mini gex-see-81"></div>
     </section>
+
+    <!--'ОКНО НОМЕРОВ'-->
+    <div class="romaining-number-tokens" id="romainingNumberTokens"></div>
 
     <!--'прелоадер'-->
     <section class="preloader preloader-visible" id="preloader">

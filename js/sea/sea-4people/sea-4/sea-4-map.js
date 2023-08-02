@@ -28,8 +28,10 @@ const gex17 = document.getElementById('gex17');
     5 - камень (3шт)
 -*/
 const gexMapAtrNumberBase = [1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2]
-//клон массива
 let gexMapAtrNumber = gexMapAtrNumberBase.slice(0)
+//доп гексы
+const mapGexArrAdditionalBase = [3, 5, 4]
+let mapGexArrAdditional = mapGexArrAdditionalBase.slice(0)
 
 //-----------раскрас гексов и сортировка----------
 gexMapPicture(allMapGex);
@@ -55,12 +57,7 @@ const generateMap = () => {
     mapGenerationGex(gex14, gex11, gex15)
     mapGenerationGex(gex1, gex2, gex3)
 
-    gexMapAtrNumber.push(3)
-
     mapGenerationGex(gex10, gex11, gex14)
-
-    gexMapAtrNumber.push(5)
-
     mapGenerationGex(gex17, gex15, gex16)
 
     //---Смена изображений в соответствии со значением атрибута----
@@ -75,12 +72,12 @@ generateMapGexButton.onclick = function () {
     initialStateArrayGexRes()
     //клон основного массива гексов
     gexMapAtrNumber = gexMapAtrNumberBase.slice(0)
+    mapGexArrAdditional = mapGexArrAdditionalBase.slice(0)
     //заполнение карты ресурсами
     generateMap()
-    //если камней 5
-    if (stoneGexArray.length === 5) {
-        romainingNumberTokens.textContent = '5 КАМНЕЙ'
-    }
+    //остаток массива гексов
+    romainingNumberTokens.textContent = gexMapAtrNumber
+
     //----ЕСЛИ РЕСУРСОВ БОЛЬШЕ ЧЕМ НУЖНО
     while (treeGexArray.length != 4 ||
         ryeGexArray.length > 4 || ryeGexArray.length < 3 ||
@@ -92,6 +89,7 @@ generateMapGexButton.onclick = function () {
         romainingNumberTokens.textContent = ''
         initialStateArrayGexRes()
         gexMapAtrNumber = gexMapAtrNumberBase.slice(0)
+        mapGexArrAdditional = mapGexArrAdditionalBase.slice(0)
         generateMap()
     }
 }

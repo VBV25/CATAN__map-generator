@@ -15,15 +15,20 @@
 </head>
 
 <body class="lock" id="body">
+
+    <!--'КНОПКИ'-->
     <div class="btn-group">
-        <a class="btn" href="index.html">Вернуться к выбору</a>
-        <button class="btn" id="generateMapGex">Сгенерировать карту</button>
-        <button class="btn" id="generateNumberGex">Сгенерировать цифры</button>
-        <button class="full-random-map-gex" id="fullRandomMapGex">полный рандом гексов</button>
-        <div class="romaining-number-tokens" id="romainingNumberTokens"></div>
+        <a class="btn btn-back" href="index.html">Назад</a>
+
+        <button class="btn btn-gen" id="generateMapGex">Карта</button>
+        <button class="btn btn-gen" id="generateNumberGex">Цифры</button>
+        <button class="btn btn-full-gen" id="fullRandomMapGex">Рандом <br> гексов</button>
+        <button class="btn btn-full-gen" id="fullRandomNumGex">Рандом<br> номеров</button>
+        <button class="btn btn-rules">Правила</button>
     </div>
+
     <!--'НУЛЕВОЙ ГЕКС СРАВНЕНИЯ'-->
-    <div data-gex="0" id="gex0"></div>
+    <div data-gex="777" id="gex0"></div>
 
     <section class="map">
         <!--'1 линия'-->
@@ -33,64 +38,66 @@
         <div class="map__gex gex-2" data-gex="2" id="gex2">
             <h2 class="map__gex-text" id="gexNumber2">1</h2>
         </div>
-        <div class="map__gex gex-3" data-gex="3" id="gex3">
+        <div class="map__gex gex-3" data-gex="2" id="gex3">
             <h2 class="map__gex-text" id="gexNumber3">1</h2>
         </div>
         <!--'2 линия'-->
-        <div class="map__gex gex-4" data-gex="4" id="gex4">
+        <div class="map__gex gex-4" data-gex="3" id="gex4">
             <h2 class="map__gex-text" id="gexNumber4">1</h2>
         </div>
         <div class="map__gex gex-5" data-gex="5" id="gex5">
             <h2 class="map__gex-text" id="gexNumber5">1</h2>
         </div>
-        <div class="map__gex gex-6" data-gex="1" id="gex6">
+        <div class="map__gex gex-6" data-gex="3" id="gex6">
             <h2 class="map__gex-text" id="gexNumber6">1</h2>
         </div>
-        <div class="map__gex gex-7" data-gex="2" id="gex7">
+        <div class="map__gex gex-7" data-gex="1" id="gex7">
             <h2 class="map__gex-text" id="gexNumber7">1</h2>
         </div>
         <!--'3 линия'-->
         <div class="map__gex gex-8" data-gex="1" id="gex8">
             <h2 class="map__gex-text" id="gexNumber8">1</h2>
         </div>
-        <div class="map__gex gex-9" data-gex="2" id="gex9">
+        <div class="map__gex gex-9" data-gex="4" id="gex9">
             <h2 class="map__gex-text" id="gexNumber9">1</h2>
         </div>
         <!--ПУСТЫНЯ-->
-        <div class="map__gex gex-10" data-gex="3" id="gex10">
-            <img src="img/6.png" alt="">
+        <div class="map__gex-desert gex-90">
         </div>
         <!---------->
-        <div class="map__gex gex-11" data-gex="4" id="gex11">
+        <div class="map__gex gex-11" data-gex="5" id="gex11">
             <h2 class="map__gex-text" id="gexNumber11">1</h2>
         </div>
-        <div class="map__gex gex-12" data-gex="5" id="gex12">
+        <div class="map__gex gex-12" data-gex="3" id="gex12">
             <h2 class="map__gex-text" id="gexNumber12">1</h2>
         </div>
         <!--'4 линия'-->
         <div class="map__gex gex-13" data-gex="3" id="gex13">
             <h2 class="map__gex-text" id="gexNumber13">1</h2>
         </div>
-        <div class="map__gex gex-14" data-gex="4" id="gex14">
+        <div class="map__gex gex-14" data-gex="5" id="gex14">
             <h2 class="map__gex-text" id="gexNumber14">1</h2>
         </div>
-        <div class="map__gex gex-15" data-gex="5" id="gex15">
+        <div class="map__gex gex-15" data-gex="1" id="gex15">
             <h2 class="map__gex-text" id="gexNumber15">1</h2>
         </div>
-        <div class="map__gex gex-16" data-gex="1" id="gex16">
+        <div class="map__gex gex-16" data-gex="2" id="gex16">
             <h2 class="map__gex-text" id="gexNumber16">1</h2>
         </div>
         <!--'5 линия'-->
-        <div class="map__gex gex-17" data-gex="2" id="gex17">
+        <div class="map__gex gex-17" data-gex="4" id="gex17">
             <h2 class="map__gex-text" id="gexNumber17">1</h2>
         </div>
-        <div class="map__gex gex-18" data-gex="3" id="gex18">
+        <div class="map__gex gex-18" data-gex="2" id="gex18">
             <h2 class="map__gex-text" id="gexNumber18">1</h2>
         </div>
         <div class="map__gex gex-19" data-gex="4" id="gex19">
             <h2 class="map__gex-text" id="gexNumber19">1</h2>
         </div>
     </section>
+
+    <!--'ОКНО НОМЕРОВ'-->
+    <div class="romaining-number-tokens" id="romainingNumberTokens"></div>
 
     <!--'прелоадер'-->
     <section class="preloader preloader-visible" id="preloader">
@@ -99,10 +106,14 @@
         <div class="preloader__text">Загрузка страницы</div>
         <div class="preloader__loader"></div>
     </section>
-    <!--'SCRIPT'-->
+    <!---------'SCRIPT'--------->
+    <!--'BASE'-->
+    <script src="js/all-base-function/map-gen.js"></script>
+    <script src="js/all-base-function/num-gen.js"></script>
+    <!--'all'-->
     <script src="js/preloader.js"></script>
-    <script src="js/base/base-desert/base-desert.js"></script>
-    <script src="js/base/base-desert/number-gex-desert.js"></script>
+    <script src="js/base/base-desert/desert-base-map.js"></script>
+    <script src="js/base/base-desert/desert-base-number.js"></script>
 </body>
 
 </html>

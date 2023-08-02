@@ -1,5 +1,6 @@
 const generateNumberGexBtn = document.getElementById('generateNumberGex');
 const allGexNumberToken = document.getElementsByClassName('map__gex-text');
+const fullRandomNumGexAllMap = document.getElementById('fullRandomNumGex');
 
 //обнуление чисел на карте
 const allGexNumberTokenArr = Array.from(allGexNumberToken);
@@ -216,8 +217,6 @@ const resursCheckGexFn = function (generatedGex, comparisonToken1, comparisonTok
             numberGexForEach == resVar6 ||
             numberGexForEach == 100) {
             //
-
-
             numArrAdditional.find((item, index) => {
                 if (
                     item != compTok1 &&
@@ -317,4 +316,17 @@ const populaNumberGex = () => {
             element.classList.remove('noNumber');
         }
     });
+}
+
+
+/*--------ПОЛНЫЙ РАНДОМ НОМЕРНЫХ ЖЕТОНОВ---*/
+
+let fullRandomNumberGexArr
+let propertyFullRandomAllNumberGex;
+let propertyFullRandomAllNumberGexIndex;
+
+
+const gexMapFullNumberArrRandomFn = () => {
+    propertyFullRandomAllNumberGexIndex = Math.floor(Math.random() * fullRandomNumberGexArr.length)
+    return propertyFullRandomAllNumberGex = fullRandomNumberGexArr[propertyFullRandomAllNumberGexIndex]
 }

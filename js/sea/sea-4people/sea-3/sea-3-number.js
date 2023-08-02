@@ -135,3 +135,38 @@ generateNumberGexBtn.onclick = function () {
     romainingNumberTokens.textContent = gexNumberArray
     populaNumberGex();
 };
+
+///-------ПОЛНЫЙ РАНДОМ НОМЕРОВ-------
+
+fullRandomNumGexAllMap.onclick = function () {
+    romainingNumberTokens.textContent = ''
+    //обнуление номерных жетонов
+    startNumberGexMap()
+    //общий массив с номерными жетонами--
+    fullRandomNumberGexArr = gexNumberBaseArray.slice(0)
+    allMapGex.forEach((el) => {
+        if (el.dataset.gex != 7) {
+            //перемешиваем массив
+            allArrayShuffle(fullRandomNumberGexArr)
+            //получаем рандомное число
+            gexMapFullNumberArrRandomFn()
+            //присваиваем число жетону гекса
+            el.children[0].textContent = propertyFullRandomAllNumberGex
+            //удаляем число из массива
+            fullRandomNumberGexArr.splice(propertyFullRandomAllNumberGexIndex, 1)
+        }
+    })
+
+    //выделяем 6 и 8 
+    populaNumberGex();
+}
+
+
+const btn = document.getElementsByClassName('btn');
+let btnArr = Array.from(btn)
+console.log(btnArr);
+btnArr.forEach((el) => {
+    el.onclick = () => {
+        console.log('111');
+    }
+})

@@ -34,13 +34,13 @@ const gettingNewValuesGexNumber = () => {
     gexNumber15 = Number(gex15.children[0].textContent);
     gexNumber16 = Number(gex16.children[0].textContent);
     gexNumber17 = Number(gex17.children[0].textContent);
-
 }
 //массив номерных жетонов общий
 const gexNumberBaseArray = [4, 5, 6, 8, 9, 10, 3, 11, 4, 5, 6, 8, 9, 10, 5, 9, 6];
 let gexNumberArray = gexNumberBaseArray.slice(0)
-const numArrAdditionalBase = [8, 10, 4, 5, 9, 6]
+const numArrAdditionalBase = [8, 4, 10, 5, 9, 6]
 let numArrAdditional = numArrAdditionalBase.slice(0)
+
 /*-----------КЛИК-ФУНКЦИЯ----------------*/
 generateNumberGexBtn.onclick = function () {
     //------ВОЗВРАТ БАЗОВЫХ НАСТРОЕК---
@@ -54,76 +54,81 @@ generateNumberGexBtn.onclick = function () {
     //общий массив с номерными жетонами--
     gexNumberArray = gexNumberBaseArray.slice(0);
     numArrAdditional = numArrAdditionalBase.slice(0)
-
     //----ГЕНЕРАЦИЯ-номеров----
     //------1----
     gettingNewValuesGexNumber()
-    randomNumberCheckGex(gex3)
-    delleteNumberFromArray(gex3)
+    randomNumberCheckGex(gex2)
+    delleteNumberFromArray(gex2)
     //-----2----
     gettingNewValuesGexNumber()
-    randomNumberCheckGex(gex5, gexNumber3)
+    randomNumberCheckGex(gex5, gexNumber2)
     delleteNumberFromArray(gex5)
     //-----3----
     gettingNewValuesGexNumber()
-    randomNumberCheckGex(gex8, gexNumber5)
-    delleteNumberFromArray(gex8)
+    randomNumberCheckGex(gex7, gexNumber5, gexNumber2)
+    delleteNumberFromArray(gex7)
     //-----4----
     gettingNewValuesGexNumber()
-    randomNumberCheckGex(gex12, gexNumber8)
-    delleteNumberFromArray(gex12)
+    randomNumberCheckGex(gex6, gexNumber5, gexNumber7, gexNumber2)
+    delleteNumberFromArray(gex6)
+
+
     //-----5----
     gettingNewValuesGexNumber()
-    randomNumberCheckGex(gex11, gexNumber12)
-    delleteNumberFromArray(gex11)
+    randomNumberCheckGex(gex13)
+    delleteNumberFromArray(gex13)
     //-----6----
     gettingNewValuesGexNumber()
-    randomNumberCheckGex(gex15, gexNumber11, gexNumber12)
-    delleteNumberFromArray(gex15)
+    randomNumberCheckGex(gex14, gexNumber13)
+    delleteNumberFromArray(gex14)
     //-----7----
     gettingNewValuesGexNumber()
-    randomNumberCheckGex(gex2, gexNumber3, gexNumber5)
-    delleteNumberFromArray(gex2)
+    randomNumberCheckGex(gex15, gexNumber13, gexNumber14)
+    delleteNumberFromArray(gex15)
     //-----8--
     gettingNewValuesGexNumber()
-    randomNumberCheckGex(gex4, gexNumber2, gexNumber5, gexNumber8)
-    delleteNumberFromArray(gex4)
+    randomNumberCheckGex(gex16, gexNumber13, gexNumber14, gexNumber15)
+    delleteNumberFromArray(gex16)
     //-----9--
     gettingNewValuesGexNumber()
-    randomNumberCheckGex(gex7, gexNumber4, gexNumber8, gexNumber11, gexNumber12)
-    delleteNumberFromArray(gex7)
+    randomNumberCheckGex(gex12, gexNumber13, gexNumber14)
+    delleteNumberFromArray(gex12)
     //-----10--
     gettingNewValuesGexNumber()
-    randomNumberCheckGex(gex9, gexNumber5, gexNumber8)
-    delleteNumberFromArray(gex9)
+    randomNumberCheckGex(gex11, gexNumber12, gexNumber13)
+    delleteNumberFromArray(gex11)
+
+
     //-----11------
     gettingNewValuesGexNumber()
-    randomNumberCheckGex(gex13, gexNumber8, gexNumber9, gexNumber12)
-    delleteNumberFromArray(gex13)
+    randomNumberCheckGex(gex3, gexNumber2, gexNumber5, gexNumber6)
+    delleteNumberFromArray(gex3)
     //-----12--
     gettingNewValuesGexNumber()
-    randomNumberCheckGex(gex16, gexNumber12, gexNumber13, gexNumber15)
-    delleteNumberFromArray(gex16)
+    randomNumberCheckGex(gex4, gexNumber2, gexNumber5)
+    delleteNumberFromArray(gex4)
     //-----13--
     gettingNewValuesGexNumber()
-    randomNumberCheckGex(gex6, gexNumber3, gexNumber5, gexNumber9)
-    delleteNumberFromArray(gex6)
+    randomNumberCheckGex(gex8, gexNumber6, gexNumber7)
+    delleteNumberFromArray(gex8)
     //-----14--
     gettingNewValuesGexNumber()
-    randomNumberCheckGex(gex14, gexNumber11, gexNumber15)
-    delleteNumberFromArray(gex14)
-    //-----15--
-    gettingNewValuesGexNumber()
-    randomNumberCheckGex(gex1, gexNumber2, gexNumber3)
+    randomNumberCheckGex(gex1, gexNumber2, gexNumber4)
     delleteNumberFromArray(gex1)
-    //-----16--
-    gettingNewValuesGexNumber()
-    randomNumberCheckGex(gex10, gexNumber11, gexNumber14)
-    delleteNumberFromArray(gex10)
-    //-----17--
+
+
+    //-----15--
     gettingNewValuesGexNumber()
     randomNumberCheckGex(gex17, gexNumber15, gexNumber16)
     delleteNumberFromArray(gex17)
+    //-----16--
+    gettingNewValuesGexNumber()
+    randomNumberCheckGex(gex9, gexNumber7, gexNumber8)
+    delleteNumberFromArray(gex9)
+    //-----17--
+    gettingNewValuesGexNumber()
+    randomNumberCheckGex(gex10, gexNumber9)
+    delleteNumberFromArray(gex10)
 
     //---------------------------------
 

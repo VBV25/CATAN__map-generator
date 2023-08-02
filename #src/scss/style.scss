@@ -1,6 +1,6 @@
-@import 'param-nul-base-preload/null-style';
-@import 'param-nul-base-preload/base';
-@import 'param-nul-base-preload/preloader';
+@import "param-nul-base-preload/null-style";
+@import "param-nul-base-preload/base";
+@import "param-nul-base-preload/preloader";
 //--------------------------------------
 html {
     width: 100%;
@@ -84,16 +84,32 @@ b {
 }
 
 .btn {
+    position: relative;
+    top: 0;
     width: max-content;
     height: 3vw;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 2vw;
+    margin-bottom: 7px;
     padding: 10px;
-    border: 2px solid $goldColor;
+    border: 1px solid rgb(44, 44, 118);
+    border-radius: 5px;
+    background: -webkit-linear-gradient(0deg, rgb(227, 227, 227) 16%, rgb(179, 182, 182) 50%, rgb(229, 229, 229));
+    background: -moz-linear-gradient(0deg, rgb(227, 227, 227) 16%, rgb(179, 182, 182) 50%, rgb(229, 229, 229));
+    background: linear-gradient(0deg, rgb(227, 227, 227) 16%, rgb(179, 182, 182) 50%, rgb(229, 229, 229));
     color: $blackColor;
-    background-color: $smokeColor;
+    cursor: pointer;
+    //
+    box-shadow: 0 7px 0px rgb(172, 172, 172), 0 0 15px 2px black;
+    transition: all 0.3s;
+    &:active {
+        top: 3px;
+        transform: rotateX(20deg);
+        box-shadow: 0 0px 0px rgb(172, 172, 172);
+        transition: all 0.3s;
+    }
 }
 
 .sea-group-map {
@@ -103,14 +119,26 @@ b {
 }
 
 .sea-1-4people-btn {
-    border-color: rgb(10, 208, 10) !important;
-    background-color: rgb(182, 245, 182);
+    border-color: rgb(6, 147, 6) !important;
+    background: -webkit-linear-gradient(0deg, rgba(50, 220, 78, 0.786) 16%, rgb(179, 182, 182) 50%, rgb(95, 247, 71));
+    background: -moz-linear-gradient(0deg, rgba(50, 220, 78, 0.786) 16%, rgb(179, 182, 182) 50%, rgb(95, 247, 71));
+    background: linear-gradient(0deg, rgba(50, 220, 78, 0.786) 16%, rgb(179, 182, 182) 50%, rgb(95, 247, 71));
     cursor: default;
 }
-
+@media (max-width: 500px) {
+    .btn {
+        border: 1px solid rgb(44, 44, 118);
+        box-shadow: 0 3px 0px rgb(63, 63, 63), 0 0 5px 2px rgba(0, 0, 0, 0.572) inset;
+        &:active {
+            top: 5px;
+            transform: rotateX(30deg);
+            box-shadow: 0 0px 0px rgb(172, 172, 172);
+        }
+    }
+}
 @media screen and (orientation: portrait) {
     body {
-        background-image: url('../img/ocean.jpg');
+        background-image: url("../img/ocean.jpg");
     }
     .portr-bg-img {
         display: block;
@@ -119,26 +147,21 @@ b {
         display: none;
     }
     .content {
-        row-gap: 10px
+        row-gap: 10px;
     }
     .title {
-        @include fontSize(4vw,
-        110%,
-        900);
+        @include fontSize(4vw, 110%, 900);
         color: $whiteColor;
         @include textBorderBlack;
     }
     .subtitle {
         margin: 5px 0px 10px;
-        @include fontSize(2.5vw,
-        120%,
-        700);
+        @include fontSize(2.5vw, 120%, 700);
     }
     .btn {
         height: 6vw;
         font-size: 3vw;
-        padding: 5px;
-        border: 2px solid $goldColor;
+        padding: 7px;
     }
     footer {
         font-size: 2vw;

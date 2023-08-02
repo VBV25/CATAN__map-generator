@@ -22,17 +22,17 @@ const shuffle = (array) => {
 /*-----------НОВЫЕ МАССИВЫ СГЕНЕРИРОВАННОЙ КАРТЫ--------*/
 //---новый массив гексов сформированной карты---
 let newMapQuantityGexArray = []
-    //массив гексов с деревом
+//массив гексов с деревом
 let treeGexArray = []
-    //массив гексов ржи
+//массив гексов ржи
 let ryeGexArray = []
-    //массив гексов с баранами
+//массив гексов с баранами
 let ramsGexArray = []
-    //массив гексов с глиной
+//массив гексов с глиной
 let clayGexArray = []
-    //массив с камнем
+//массив с камнем
 let stoneGexArray = []
-    //массив с морем
+//массив с морем
 let seeGexArray = []
 
 
@@ -94,7 +94,7 @@ const gex42 = document.getElementById('gex42');
 
 //массив с ресурсами
 const gexMapAtrNumberBase = [1, 7, 2, 7, 3, 7, 4, 7, 5, 7, 1, 7, 2, 7, 3, 7, 4, 7, 5, 7, 1, 7, 2, 7, 3, 7, 4, 7, 5, 7, 1, 7, 2, 7, 3, 7, 4, 7, 5, 1, 2, 3]
-    //клон массива
+//клон массива
 let gexMapAtrNumber = gexMapAtrNumberBase.slice(0)
 
 
@@ -170,7 +170,8 @@ const arrayShuffle = (forArray) => {
 
 
 /*------------------КЛИК-ФУНКЦИЯ--------------------------*/
-generateMapGexButton.onclick = function() {
+generateMapGexButton.onclick = function () {
+    romainingNumberTokens.textContent = ''
     //----СТАРТОВЫЕ ЗНАЧЕНИЯ-----
     gexMapAtrNumber = gexMapAtrNumberBase.slice(0)
     initialStateArrayGexRes()

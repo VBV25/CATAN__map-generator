@@ -33,8 +33,11 @@ const gex23 = document.getElementById('gex23');
     5 - камень (4шт)
 -*/
 const gexMapAtrNumberBase = [1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3]
-    //клон массива
 let gexMapAtrNumber = gexMapAtrNumberBase.slice(0)
+
+//доп гексы
+const mapGexArrAdditionalBase = [5, 4, 3, 2]
+let mapGexArrAdditional = mapGexArrAdditionalBase.slice(0)
 
 //-----------раскрас гексов и сортировка----------
 gexMapPicture(allMapGex);
@@ -54,7 +57,7 @@ const generateMap = () => {
     mapGenerationGex(gex5, gex1, gex2, gex3, gex6)
     mapGenerationGex(gex6, gex5)
     mapGenerationGex(gex7, gex5, gex6)
-        //--8 гекс вконце--
+    //--8 гекс вконце--
 
     //-----правый-верхний-БОЛЬШОЙ-ОСТРОВ---
     mapGenerationGex(gex9, gex2, gex3, gex4)
@@ -64,7 +67,7 @@ const generateMap = () => {
     mapGenerationGex(gex13, gex10, gex12)
     mapGenerationGex(gex14, gex9, gex10, gex11, gex12)
     mapGenerationGex(gex15, gex12, gex13, gex14)
-        //16-крайний-ниже вконце
+    //16-крайний-ниже вконце
 
     //-----левый-нижний-БОЛЬШОЙ-ОСТРОВ---
     mapGenerationGex(gex20)
@@ -89,16 +92,19 @@ const generateMap = () => {
 }
 
 /*------------------КЛИК-ФУНКЦИЯ--------------------------*/
-generateMapGexButton.onclick = function() {
+generateMapGexButton.onclick = function () {
     romainingNumberTokens.textContent = ''
-        //------начальные данные генерации---
-        //очищаем массивы ресурсов
+    //------начальные данные генерации---
+    //очищаем массивы ресурсов
     initialStateArrayGexRes()
-        //клон основного массива гексов
+    //клон основного массива гексов
     gexMapAtrNumber = gexMapAtrNumberBase.slice(0)
-        //заполнение карты ресурсами
+    mapGexArrAdditional = mapGexArrAdditionalBase.slice(0)
+    //заполнение карты ресурсами
     generateMap()
-        //если камней 5
+    //остаток массива гексов
+    romainingNumberTokens.textContent = gexMapAtrNumber
+    //если камней 5
     if (stoneGexArray.length === 5) {
         romainingNumberTokens.textContent = '5 КАМНЕЙ'
     }
@@ -113,6 +119,7 @@ generateMapGexButton.onclick = function() {
         romainingNumberTokens.textContent = ''
         initialStateArrayGexRes()
         gexMapAtrNumber = gexMapAtrNumberBase.slice(0)
+        mapGexArrAdditional = mapGexArrAdditionalBase.slice(0)
         generateMap()
     }
 }
@@ -120,7 +127,7 @@ generateMapGexButton.onclick = function() {
 //---ПОЛНЫЙ РАНДОМ ГЕКСОВ КАРТЫ---
 fullRandomMapGex.onclick = () => {
     initialStateArrayGexRes()
-    gexMapAtrNumberFullRandom = [1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 1, 2, 3]
+    gexMapAtrNumberFullRandom = gexMapAtrNumberBase.slice(0)
     allRandomGexMapGen(allMapGexNew)
     gexMapPicture(allMapGex);
 }

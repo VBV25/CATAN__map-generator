@@ -38,7 +38,6 @@ let clayGexArray = []
 //массив с камнем
 let stoneGexArray = []
 
-
 //-----------раскрас гексов и сортировка----------
 const gexMapPicture = (allMapGexArray) => {
     allMapGexArray.forEach((element) => {
@@ -48,7 +47,6 @@ const gexMapPicture = (allMapGexArray) => {
         element.classList.remove('block3');
         element.classList.remove('block4');
         element.classList.remove('block5');
-
         if (datasetGexMap == 1) {
             element.classList.add('block1');
             treeGexArray.push(element)
@@ -90,23 +88,87 @@ const initialStateArrayGexRes = () => {
     stoneGexArray = []
 }
 
+//---цикл для нахождения первого значения подходящего к условиям
+let compGex1
+let compGex2
+let compGex3
+let compGex4
+let compGex5
+
+let spliceNewGexMapIndex
+
+let newNumGexMapDatasetIndex;
+let newNumGexMapDataset;
+const matchGexMapSearchCycle = () => {
+    allArrayShuffle(gexMapAtrNumber)
+    gexMapAtrNumber.push(999)
+    gexMapAtrNumber.find((item, index) => {
+        if (item != compGex1.dataset.gex && item != compGex2.dataset.gex && item != compGex3.dataset.gex && item != compGex4.dataset.gex && item != compGex5.dataset.gex) {
+            newNumGexMapDataset = item
+            newNumGexMapDatasetIndex = index;
+            return newNumGexMapDataset
+        }
+    });
+    if (newNumGexMapDataset == 999) {
+        gexMapAtrNumber.splice(newNumGexMapDatasetIndex, 1)
+    } else {
+        gexMapAtrNumber.find((item, index) => {
+            if (item == 999) { gexMapAtrNumber.splice(index, 1) }
+        })
+    }
+}
 //----Функция генерации рандомного гекса карты
 //вместо gexSerialNumber --- подставляем гекс КОТОРЫЙ сравниваем (пример:gex1)
 //вместо comparableGex... --- подставляем гексы с какими сравниваем (пример:gex2,gex3,gex4)
-const mapGenerationGex = (gexSerialNumber, comparableGex1 = gex0, comparableGex2 = gex0, comparableGex3 = gex0, comparableGex4 = gex0) => {
-    shuffle(gexMapAtrNumber)
+const mapGenerationGex = (gexSerialNumber, comparableGex1 = gex0, comparableGex2 = gex0, comparableGex3 = gex0, comparableGex4 = gex0, comparableGex5 = gex0) => {
+    //
+    compGex1 = comparableGex1
+    compGex2 = comparableGex2
+    compGex3 = comparableGex3
+    compGex4 = comparableGex4
+    compGex5 = comparableGex5
+    //
+    allArrayShuffle(gexMapAtrNumber)
     objectGexMapArrForRandom(gexMapAtrNumber)
     gexSerialNumber.setAttribute('data-gex', randomGexMapAtrNumber);
-    if (gexSerialNumber.dataset.gex === comparableGex1.dataset.gex || gexSerialNumber.dataset.gex === comparableGex2.dataset.gex || gexSerialNumber.dataset.gex === comparableGex3.dataset.gex || gexSerialNumber.dataset.gex === comparableGex4.dataset.gex || gexSerialNumber.dataset.gex === undefined) {
-        let newNumGexMapDatasetIndex;
-        let newNumGexMapDataset = gexMapAtrNumber.find((item, index) => {
-            if (item != comparableGex1.dataset.gex && item != comparableGex2.dataset.gex && item != comparableGex3.dataset.gex && item != comparableGex4.dataset.gex && item != undefined) {
-                newNumGexMapDatasetIndex = index;
-                return item
-            }
-        });
-        gexSerialNumber.setAttribute('data-gex', newNumGexMapDataset)
-        gexMapAtrNumber.splice(newNumGexMapDatasetIndex, 1)
+    if (gexSerialNumber.dataset.gex === compGex1.dataset.gex ||
+        gexSerialNumber.dataset.gex === compGex2.dataset.gex ||
+        gexSerialNumber.dataset.gex === compGex3.dataset.gex ||
+        gexSerialNumber.dataset.gex === compGex4.dataset.gex ||
+        gexSerialNumber.dataset.gex === compGex5.dataset.gex) {
+        //выполняем цикл подбора числа если рандом не подошел
+        matchGexMapSearchCycle()
+        //если число все еще равно
+        if (gexSerialNumber.dataset.gex == compGex1.dataset.gex ||
+            gexSerialNumber.dataset.gex == compGex2.dataset.gex ||
+            gexSerialNumber.dataset.gex == compGex3.dataset.gex ||
+            gexSerialNumber.dataset.gex == compGex4.dataset.gex ||
+            gexSerialNumber.dataset.gex == compGex5.dataset.gex ||
+            gexSerialNumber.dataset.gex == 999) {
+            //
+            mapGexArrAdditional.find((item, index) => {
+                if (item != compGex1.dataset.gex &&
+                    item != compGex2.dataset.gex &&
+                    item != compGex3.dataset.gex &&
+                    item != compGex4.dataset.gex &&
+                    item != compGex5.dataset.gex &&
+                    item != 999) {
+                    newNumGexMapDataset = item
+                    newNumGexMapDatasetIndex = index;
+                    spliceNewGexMapIndex = Number(newNumGexMapDatasetIndex - 1)
+                    return newNumGexMapDataset
+                }
+            })
+            //присваиваем новое значение атрибута гексу
+            gexSerialNumber.setAttribute('data-gex', newNumGexMapDataset)
+            //удаляем число из массива
+            mapGexArrAdditional.splice(newNumGexMapDatasetIndex, 1)
+        } else {
+            //присваиваем новое значение атрибута гексу
+            gexSerialNumber.setAttribute('data-gex', newNumGexMapDataset)
+            //удаляем число из массива
+            gexMapAtrNumber.splice(newNumGexMapDatasetIndex, 1)
+        }
     } else {
         gexMapAtrNumber.splice(randomIndexGexMapAtrNumber, 1);
     }
@@ -114,14 +176,12 @@ const mapGenerationGex = (gexSerialNumber, comparableGex1 = gex0, comparableGex2
 
 //-------ПОЛНЫЙ РАНДОМ ГЕКСОВ---
 let gexMapAtrNumberFullRandom
-
 const arrayShuffle = () => {
     for (let i = 0; i < 30; i++) {
         shuffle(gexMapAtrNumberFullRandom)
     }
     return gexMapAtrNumberFullRandom
 }
-
 const allRandomGexMapGen = (arrayGex) => {
     arrayShuffle()
     arrayGex.forEach((el) => {
