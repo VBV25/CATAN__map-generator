@@ -15,6 +15,7 @@ let gexNumber14 = Number(gex14.children[0].textContent);
 let gexNumber15 = Number(gex15.children[0].textContent);
 let gexNumber16 = Number(gex16.children[0].textContent);
 let gexNumber17 = Number(gex17.children[0].textContent);
+let gexNumber18 = Number(gex18.children[0].textContent);
 //
 const gettingNewValuesGexNumber = () => {
     gexNumber1 = Number(gex1.children[0].textContent);
@@ -34,6 +35,7 @@ const gettingNewValuesGexNumber = () => {
     gexNumber15 = Number(gex15.children[0].textContent);
     gexNumber16 = Number(gex16.children[0].textContent);
     gexNumber17 = Number(gex17.children[0].textContent);
+    gexNumber18 = Number(gex18.children[0].textContent);
 }
 //массив номерных жетонов общий
 const gexNumberBaseArray = [4, 5, 6, 8, 9, 10, 3, 11, 4, 5, 6, 8, 9, 10, 5, 9, 6, 8];
@@ -41,86 +43,161 @@ let gexNumberArray = gexNumberBaseArray.slice(0)
 const numArrAdditionalBase = [4, 10, 5, 9, 6, 8, 3, 11]
 let numArrAdditional = numArrAdditionalBase.slice(0)
 
-/*-----------КЛИК-ФУНКЦИЯ----------------*/
-generateNumberGexBtn.onclick = function () {
-    //------ВОЗВРАТ БАЗОВЫХ НАСТРОЕК---
+const cleanupObjResParamFn = () => {
     startResNum(tree)
     startResNum(rams)
     startResNum(rye)
     startResNum(clay)
     startResNum(stone)
+}
+//------ДОП ФУНКЦИИ-----
+const addFnObgectResNum = (numberGex, gexNumber) => {
+    //--дерево--
+    if (numberGex.classList.contains('block1')) {
+        checkNum11and3(tree, gexNumber)
+        overwritingVariable(tree, gexNumber)
+        return;
+    }
+    //--бараны--
+    else if (numberGex.classList.contains('block2')) {
+        checkNum11and3(rams, gexNumber)
+        overwritingVariable(rams, gexNumber)
+        return;
+    }
+    //--рожь--
+    else if (numberGex.classList.contains('block3')) {
+        checkNum11and3(rye, gexNumber)
+        overwritingVariable(rye, gexNumber)
+        return;
+    }
+    //--глина--
+    else if (numberGex.classList.contains('block4')) {
+        checkNum11and3(clay, gexNumber)
+        overwritingVariable(clay, gexNumber)
+        return;
+    }
+    //--камень--
+    else if (numberGex.classList.contains('block5')) {
+        checkNum11and3(stone, gexNumber)
+        overwritingVariable(stone, gexNumber)
+        return;
+    }
+}
+
+const gen3RightGexAdditionalFn = (numberGex, addParam1 = 1, addParam2 = 1) => {
+    if (tokenValueNew != 4 || tokenValueNew != 3 || tokenValueNew != 11 || tokenValueNew != 10
+        || tokenValueNew != addParam1 || tokenValueNew != addParam2
+    ) {
+        while (tokenValueNew != 4 && tokenValueNew != 3 && tokenValueNew != 11 && tokenValueNew != 10
+            && tokenValueNew != addParam1 && tokenValueNew != addParam2) {
+            cleanupObjResParamFn()
+            addFnObgectResNum(gex6, gexNumber6)
+            addFnObgectResNum(gex12, gexNumber12)
+            addFnObgectResNum(gex18, gexNumber18)
+            randomNumberCheckGex(numberGex, addParam1, addParam2)
+        }
+    }
+
+}
+//----------------
+
+
+/*-----------КЛИК-ФУНКЦИЯ----------------*/
+generateNumberGexBtn.onclick = function () {
+    //------ВОЗВРАТ БАЗОВЫХ НАСТРОЕК---
+    cleanupObjResParamFn()
     //обнуление номерных жетонов
     startNumberGexMap()
     //общий массив с номерными жетонами--
     gexNumberArray = gexNumberBaseArray.slice(0);
     numArrAdditional = numArrAdditionalBase.slice(0)
+
+
     //----ГЕНЕРАЦИЯ-номеров----
-    //------1----
+
+    //---ПРАВЫЕ ТРИ ГЕКСА---(6,12,18)
+    //-----1--
+    gettingNewValuesGexNumber()
+    randomNumberCheckGex(gex6)
+    gen3RightGexAdditionalFn(gex6)
+    delleteNumberFromArray(gex6)
+    //-----2--
+    gettingNewValuesGexNumber()
+    randomNumberCheckGex(gex12, gexNumber6)
+    gen3RightGexAdditionalFn(gex12, gexNumber6)
+    delleteNumberFromArray(gex12)
+    //-----3--
+    gettingNewValuesGexNumber()
+    randomNumberCheckGex(gex18, gexNumber12)
+    gen3RightGexAdditionalFn(gex18, gexNumber12)
+    delleteNumberFromArray(gex18)
+    //------
+    gettingNewValuesGexNumber()
+    cleanupObjResParamFn()
+    addFnObgectResNum(gex6, gexNumber6)
+    addFnObgectResNum(gex12, gexNumber12)
+    addFnObgectResNum(gex18, gexNumber18)
+    //------
+
+
+
+    //----ОСТАЛЬНЫЕ ГЕКСЫ---
+    //------4----
     gettingNewValuesGexNumber()
     randomNumberCheckGex(gex8)
     delleteNumberFromArray(gex8)
-    //-----2----
+    //-----5----
     gettingNewValuesGexNumber()
     randomNumberCheckGex(gex9, gexNumber8)
     delleteNumberFromArray(gex9)
-    //-----3----
+    //-----6----
     gettingNewValuesGexNumber()
     randomNumberCheckGex(gex10, gexNumber9)
     delleteNumberFromArray(gex10)
-    //-----4----
+
+    //-----7----
     gettingNewValuesGexNumber()
-    randomNumberCheckGex(gex11, gexNumber10)
+    randomNumberCheckGex(gex11, gexNumber6, gexNumber12, gexNumber10, gexNumber18)
     delleteNumberFromArray(gex11)
-    //-----5----
+    //-----8----
     gettingNewValuesGexNumber()
     randomNumberCheckGex(gex7, gexNumber8)
     delleteNumberFromArray(gex7)
 
 
-    //-----6----
+    //-----9----
     gettingNewValuesGexNumber()
     randomNumberCheckGex(gex2, gexNumber7, gexNumber8)
     delleteNumberFromArray(gex2)
-    //-----7----
+    //-----10----
     gettingNewValuesGexNumber()
     randomNumberCheckGex(gex3, gexNumber2, gexNumber8, gexNumber9)
     delleteNumberFromArray(gex3)
-    //-----8--
+    //-----11--
     gettingNewValuesGexNumber()
     randomNumberCheckGex(gex4, gexNumber3, gexNumber9, gexNumber10)
     delleteNumberFromArray(gex4)
-    //-----9--
+    //-----12--
     gettingNewValuesGexNumber()
-    randomNumberCheckGex(gex5, gexNumber4, gexNumber10, gexNumber11)
+    randomNumberCheckGex(gex5, gexNumber4, gexNumber6, gexNumber10, gexNumber11)
     delleteNumberFromArray(gex5)
-    //-----10--
+    //-----13--
     gettingNewValuesGexNumber()
     randomNumberCheckGex(gex14, gexNumber7, gexNumber8)
     delleteNumberFromArray(gex14)
-    //-----11------
+    //-----14------
     gettingNewValuesGexNumber()
     randomNumberCheckGex(gex15, gexNumber8, gexNumber9, gexNumber14)
     delleteNumberFromArray(gex15)
-    //-----12--
+    //-----15--
     gettingNewValuesGexNumber()
     randomNumberCheckGex(gex16, gexNumber9, gexNumber10, gexNumber15)
     delleteNumberFromArray(gex16)
-    //-----13--
-    gettingNewValuesGexNumber()
-    randomNumberCheckGex(gex17, gexNumber10, gexNumber11, gexNumber16)
-    delleteNumberFromArray(gex17)
-    //-----14--
-    gettingNewValuesGexNumber()
-    randomNumberCheckGex(gex6, gexNumber5, gexNumber11)
-    delleteNumberFromArray(gex6)
-    //-----15--
-    gettingNewValuesGexNumber()
-    randomNumberCheckGex(gex18, gexNumber11, gexNumber17)
-    delleteNumberFromArray(gex18)
     //-----16--
     gettingNewValuesGexNumber()
-    randomNumberCheckGex(gex12, gexNumber6, gexNumber11, gexNumber18)
-    delleteNumberFromArray(gex12)
+    randomNumberCheckGex(gex17, gexNumber10, gexNumber11, gexNumber16, gexNumber18)
+    delleteNumberFromArray(gex17)
+
     //-----17--
     gettingNewValuesGexNumber()
     randomNumberCheckGex(gex1, gexNumber2, gexNumber7)

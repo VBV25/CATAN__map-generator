@@ -39,8 +39,10 @@ body {
 }
 .popup-active {
     top: 0 !important;
+    z-index: 150 !important;
     opacity: 1 !important;
-    transition: all 0.7s ease 0s;
+    transition: opacity 0.7s ease 0s;
+    transition: top 0.7s ease 0s;
 }
 .map {
     position: relative;
@@ -203,7 +205,7 @@ body {
 
 //---ПОПАП ПРАВИЛА---
 .rules {
-    z-index: 150;
+    z-index: -150;
     position: absolute;
     top: -200%;
     left: 0;
@@ -216,7 +218,9 @@ body {
     align-items: center;
     background-color: $blackColorOpacity;
     opacity: 0;
-    transition: all 0.7s ease 0s;
+    transition: opacity 0.7s ease 0s;
+    transition: top 0.7s ease 0s;
+    //transition: all 0.7s ease 0s;
     overflow-y: scroll;
 
     &__container {

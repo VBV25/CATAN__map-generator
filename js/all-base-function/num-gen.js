@@ -23,73 +23,73 @@ const gexMapNumberArrRandomFn = () => {
 //обнуление жетонов
 const startResNum = (obj) => {
     for (let key in obj) {
-        obj[key] = 0
+        obj[key] = 1
     }
 }
 
 //----ДЕРЕВО---
 const tree = {
-    1: 0,
-    2: 0,
-    3: 0,
-    4: 0,
-    5: 0,
-    6: 0,
+    1: 1,
+    2: 1,
+    3: 1,
+    4: 1,
+    5: 1,
+    6: 1,
 }
 
 //----БАРАНЫ---
 const rams = {
-    1: 0,
-    2: 0,
-    3: 0,
-    4: 0,
-    5: 0,
-    6: 0,
+    1: 1,
+    2: 1,
+    3: 1,
+    4: 1,
+    5: 1,
+    6: 1,
 }
 
 //----РОЖЬ---
 const rye = {
-    1: 0,
-    2: 0,
-    3: 0,
-    4: 0,
-    5: 0,
-    6: 0,
+    1: 1,
+    2: 1,
+    3: 1,
+    4: 1,
+    5: 1,
+    6: 1,
 }
 
 //----ГЛИНА---
 const clay = {
-    1: 0,
-    2: 0,
-    3: 0,
-    4: 0,
-    5: 0,
-    6: 0,
+    1: 1,
+    2: 1,
+    3: 1,
+    4: 1,
+    5: 1,
+    6: 1,
 }
 
 //----КАМЕНЬ---
 const stone = {
-    1: 0,
-    2: 0,
-    3: 0,
-    4: 0,
-    5: 0,
-    6: 0,
+    1: 1,
+    2: 1,
+    3: 1,
+    4: 1,
+    5: 1,
+    6: 1,
 }
 
 //функция перезаписи переменных
 let tokenValueNew
-const overwritingVariable = (res, tokenValNew) => {
-    tokenValNew = tokenValueNew
-    if (res[1] === 0) {
+const overwritingVariable = (res, tokenValNew = tokenValueNew) => {
+    //tokenValNew = tokenValueNew
+    if (res[1] === 1) {
         return res[1] = tokenValNew;
-    } else if (res[1] != 0 && res[2] === 0) {
+    } else if (res[1] != 1 && res[2] === 1) {
         return res[2] = tokenValNew;
-    } else if (res[1] != 0 && res[2] != 0 && res[3] === 0) {
+    } else if (res[1] != 1 && res[2] != 1 && res[3] === 1) {
         return res[3] = tokenValNew;
-    } else if (res[1] != 0 && res[2] != 0 && res[3] != 0 && res[4] === 0) {
+    } else if (res[1] != 1 && res[2] != 1 && res[3] != 1 && res[4] === 1) {
         return res[4] = tokenValNew;
-    } else if (res[1] != 0 && res[2] != 0 && res[3] != 0 && res[4] != 0 && res[5] === 0) {
+    } else if (res[1] != 1 && res[2] != 1 && res[3] != 1 && res[4] != 1 && res[5] === 1) {
         return res[5] = tokenValNew;
     }
 }

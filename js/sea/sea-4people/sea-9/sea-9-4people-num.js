@@ -386,9 +386,6 @@ generateNumberGexBtn.onclick = function () {
 
 
     //-------НОМЕРА НА ГЕКСАХ---ГЕНЕРАЦИЯ-----
-    console.log(gexNumberArray);
-    console.log(gexNumberArray.length);
-    console.log('ВЫПОЛНЕНИЕ');
 
     //-----1--(15-гекс)--
     gettingNewValuesGexNumber()
