@@ -35,28 +35,15 @@ function gettingNewValuesGexNumber() {
 
 
 //---------ВСЕ РЕСУРСЫ КРОМЕ ГЛИНЫ-----
+
 //массив номерных жетонов общий
 const gexNumberBaseArray = [3, 4, 5, 6, 8, 9, 10, 11, 4, 5, 6, 8, 9, 10];
 let gexNumberArray = gexNumberBaseArray.slice(0)
-const numArrAdditionalBase = [5, 9, 6, 8, 4, 10]
+const numArrAdditionalBase = [5, 9, 6, 8, 4, 10, 5, 9, 6, 8, 4, 10, 3, 11]
 let numArrAdditional = numArrAdditionalBase.slice(0)
-/*------------------КЛИК-ФУНКЦИЯ--------------------------*/
-generateNumberGexBtn.onclick = function () {
 
-    //------ВОЗВРАТ БАЗОВЫХ НАСТРОЕК---
-    startResNum(tree)
-    startResNum(rams)
-    startResNum(rye)
-    startResNum(clay)
-    startResNum(stone)
-    //обнуление номерных жетонов
-    startNumberGexMap()
-    //общий массив с номерными жетонами--
-    gexNumberArray = gexNumberBaseArray.slice(0);
-
-
-    //-------НОМЕРА НА ГЕКСАХ---ГЕНЕРАЦИЯ-----
-
+//----ФУНКЦИЯ ГЕНЕРАЦИИ КАРТЫ---
+const generateNumGexMapFinalFn = () => {
     //-----1--(4гекс)--
     gettingNewValuesGexNumber()
     randomNumberCheckGex(gex4)
@@ -113,6 +100,83 @@ generateNumberGexBtn.onclick = function () {
     gettingNewValuesGexNumber()
     randomNumberCheckGex(gex14, gexNumber11, gexNumber12, gexNumber13)
     delleteNumberFromArray(gex14)
+
+}
+
+
+
+
+let allGexNumTokenArrNew = []
+/*------------------КЛИК-ФУНКЦИЯ--------------------------*/
+generateNumberGexBtn.onclick = function () {
+    allGexNumTokenArrNew = []
+    //------ВОЗВРАТ БАЗОВЫХ НАСТРОЕК---
+    startResNum(tree)
+    startResNum(rams)
+    startResNum(rye)
+    startResNum(clay)
+    startResNum(stone)
+    //обнуление номерных жетонов
+    startNumberGexMap()
+    //общий массив с номерными жетонами--
+    gexNumberArray = gexNumberBaseArray.slice(0);
+    numArrAdditional = numArrAdditionalBase.slice(0)
+
+
+    //-------НОМЕРА НА ГЕКСАХ---ГЕНЕРАЦИЯ-----
+    generateNumGexMapFinalFn()
+    gettingNewValuesGexNumber()
+    allGexNumberTokenArr.forEach((el) => {
+        allGexNumTokenArrNew.push(+el.innerHTML)
+    })
+
+
+    //----ЕСЛИ ЕСТЬ НЕПОДХОДЯЩИЕ ЦИФРЫ
+    let whileIfNumGex100 = 0
+    allGexNumTokenArrNew.find((item) => {
+        if (item == 100) {
+            whileIfNumGex100 = 100
+            return whileIfNumGex100
+        } else {
+            whileIfNumGex100 = 0
+            return whileIfNumGex100
+        }
+    })
+
+    while (whileIfNumGex100 == 100) {
+        allGexNumTokenArrNew = []
+        //------ВОЗВРАТ БАЗОВЫХ НАСТРОЕК---
+        startResNum(tree)
+        startResNum(rams)
+        startResNum(rye)
+        startResNum(clay)
+        startResNum(stone)
+        //обнуление номерных жетонов
+        startNumberGexMap()
+        //общий массив с номерными жетонами--
+        gexNumberArray = gexNumberBaseArray.slice(0);
+        numArrAdditional = numArrAdditionalBase.slice(0)
+
+        generateNumGexMapFinalFn()
+        gettingNewValuesGexNumber()
+        allGexNumberTokenArr.forEach((el) => {
+            allGexNumTokenArrNew.push(+el.innerHTML)
+        })
+        allGexNumTokenArrNew.find((item) => {
+            if (item == 100) {
+                whileIfNumGex100 = 100
+                return whileIfNumGex100
+            } else {
+                whileIfNumGex100 = 0
+                return whileIfNumGex100
+            }
+        })
+
+    }
+
+
+
+
 
     //----------------------------------------------------------
 

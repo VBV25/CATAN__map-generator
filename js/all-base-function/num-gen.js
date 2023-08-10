@@ -3,7 +3,7 @@ const allGexNumberToken = document.getElementsByClassName('map__gex-text');
 const fullRandomNumGexAllMap = document.getElementById('fullRandomNumGex');
 
 //обнуление чисел на карте
-const allGexNumberTokenArr = Array.from(allGexNumberToken);
+let allGexNumberTokenArr = Array.from(allGexNumberToken);
 const startNumberGexMap = () => {
     allGexNumberTokenArr.forEach((el) => {
         el.textContent = 1;
@@ -215,7 +215,7 @@ const resursCheckGexFn = function (generatedGex, comparisonToken1, comparisonTok
             numberGexForEach == resVar4 ||
             numberGexForEach == resVar5 ||
             numberGexForEach == resVar6 ||
-            numberGexForEach == 100) {
+            numberGexForEach === 100) {
             //
             numArrAdditional.find((item, index) => {
                 if (
@@ -231,7 +231,7 @@ const resursCheckGexFn = function (generatedGex, comparisonToken1, comparisonTok
                     item != resVar4 &&
                     item != resVar5 &&
                     item != resVar6 &&
-                    item != 100) {
+                    item !== 100) {
                     numberGexForEach = item
                     numberIndexGexForEach = index
                     spliceNewNumIndex = Number(numberIndexGexForEach - 1)
